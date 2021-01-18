@@ -1,7 +1,7 @@
 # Личный проект «Техномарт»
 
 * Студент: [Артём Романов](https://up.htmlacademy.ru/htmlcss/30/user/1592203).
-* Наставник: `Неизвестно`.
+* Наставник: [Дмитрий Иовлев](https://htmlacademy.ru/profile/skywalker).
 
 ---
 
