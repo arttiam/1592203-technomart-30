@@ -8,7 +8,11 @@
         <header>
             <!--Верхня часть шапки-->
             <a href="index.html"><img src="https://via.placeholder.com/220x47" alt="Логин Техномаркет"></a>
-            <input type="text" value="Поиск:">
+
+            <form method="get" action="https://echo.htmlacademy.ru">
+                <input type="search" value="Поиск:">
+            </form>
+
             <ul>
                 <li><a href="blank.html">Закладки: <span>0</span></a></li>
                 <li><a href="blank.html">Корзина: <span>10</span></a></li>
@@ -23,7 +27,8 @@
                 <p><a href="tel:+78125550555">+7 (812) 555-05-55</a></p>
                 <p>г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
             </address>
-
+            
+            <p>Равшан Джамшутович</p>
             <a href="blank.html">Мои заказы</a>  <a href="blank.html">Личный кабинет</a>
         
 
@@ -41,15 +46,12 @@
             </nav>
         </header>
         <main>
-            <h1>Каталог перфораторов</h1>
-            <nav>
-                <ul>
-                    <li><a>Каталог</a></li>
-                    <li><a href="blank.html">Инструмент</a></li>
-                    <li><a>Перфораторы</a></li>
-                </ul>
-            </nav>
-            <h2>Перфораторы</h2>
+            <ul>
+                <li><a>Каталог</a></li>
+                <li><a href="blank.html">Инструмент</a></li>
+                <li><a>Перфораторы</a></li>
+            </ul>            
+            <h1>Перфораторы</h1>
             <section>
                 <h2>Фильтр</h2>
                 <form method="get" action="https://echo.htmlacademy.ru">
@@ -57,7 +59,6 @@
 
                     <fieldset>
                         <legend>Цена:</legend>
-                        <input type="range" min="0" max="30000">
                         <input type="range" min="0" max="30000">
                         <p><span>0</span> - <span>30000</span></p>
                     </fieldset>   
@@ -97,9 +98,9 @@
                                 <input type="radio" name="battery" value="electricity-grid" id="electricity-grid">
                                 <label for="electricity-grid">Сетевые</label>
                             </li>
-                        </ul>
-                        <button type="submit">Показать</button>
+                        </ul>                        
                     </fieldset>  
+                    <button type="submit">Показать</button>
                 </form>
             </section>              
 
