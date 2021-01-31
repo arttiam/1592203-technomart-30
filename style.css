@@ -1,6 +1,6 @@
 :root {
   --basic-white: #ffffff;
-  --semi-transparent-white: rgba(255,255,255, 0.0001);
+  --semi-transparent-white: rgba(255,255,255, 0.5);
   --dark-desaturated-blue: #32425c;
   --extra-desaturated-blue: #293449;
   --bright-red: #ee3643;
@@ -93,6 +93,8 @@ address {
 .logo-header {
   background-image: url(img/logo/logo-background-header.svg);
   box-shadow: inset 0px -5px 0px var(--extra-gray);
+  width: 220px;
+  height: 47px;
 }
 
 /*menu-header*/
