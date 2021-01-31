@@ -5,8 +5,8 @@
     <meta charset="utf-8">
     <title>HTML Academy: Техномарт</title>
 
-    <link href="normalize.css" rel="stylesheet">
-    <link href="style.css" rel="stylesheet">
+    <link href="css/normalize.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
 
     <link rel="icon" href="favicon.ico">
     <link rel="icon" href="img/icon/32.svg" type="image/svg+xml">
@@ -20,7 +20,27 @@
 
       <!--Верхня часть шапки-->
       <div class="menu-header link-nav">
-        <div class="logo-header"><a><img src="img/logo/logo-header.svg" width="106.83" height="16.9" alt="Логотип Техномаркет"></a></div>
+        <div class="logo-header">
+          <a>            
+            <!--svg logo-->
+            <svg width="220" height="47" viewBox="0 0 220 47" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <g filter="url(#filter0_i)"><rect width="220" height="47" fill="#EE3643"/></g>
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M159.847 14.6585V29.4498H157.734V14.6585H153.978V13.0151H163.604V14.6585H159.847ZM151.712 23.3572C151.344 23.819 150.883 24.1477 150.327 24.3433C149.771 24.539 149.11 24.6368 148.343 24.6368C147.983 24.6368 147.576 24.6133 147.122 24.5664C146.668 24.5194 146.293 24.4646 145.995 24.402V29.4498H143.882V13.2498C144.477 13.0777 145.076 12.9564 145.678 12.8859C146.281 12.8155 146.934 12.7803 147.639 12.7803C148.578 12.7803 149.376 12.8781 150.034 13.0738C150.691 13.2694 151.223 13.5942 151.63 14.0481C152.037 14.502 152.334 15.1046 152.522 15.8559C152.71 16.6072 152.804 17.5385 152.804 18.6498C152.804 19.7924 152.714 20.7472 152.534 21.5142C152.354 22.2811 152.08 22.8955 151.712 23.3572ZM150.515 16.5368C150.397 15.9733 150.214 15.5272 149.963 15.1985C149.713 14.8698 149.396 14.639 149.012 14.5059C148.629 14.3729 148.171 14.3064 147.639 14.3064H145.995V22.9933H147.639C148.171 22.9933 148.629 22.9268 149.012 22.7938C149.396 22.6607 149.713 22.4298 149.963 22.1011C150.214 21.7724 150.397 21.3264 150.515 20.7629C150.632 20.1994 150.691 19.4951 150.691 18.6498C150.691 17.8046 150.632 17.1003 150.515 16.5368ZM138.6 25.2238H133.904L132.847 29.4498H130.734L134.726 13.0151H137.778L141.769 29.4498H139.656L138.6 25.2238ZM136.299 15.3629H136.205L134.256 23.5803H138.247L136.299 15.3629ZM126.156 17.2411H126.039L122.634 27.3368H120.521L117.117 17.2411H117L116.295 29.4498H114.182L115.121 13.0151H117.704L121.531 24.2846H121.625L125.452 13.0151H128.034L128.974 29.4498H126.861L126.156 17.2411ZM110.379 27.9238C109.941 28.5655 109.412 29.0194 108.794 29.2855C108.176 29.5516 107.467 29.6846 106.669 29.6846C105.871 29.6846 105.163 29.5516 104.544 29.2855C103.926 29.0194 103.398 28.5655 102.96 27.9238C102.521 27.282 102.189 26.4172 101.962 25.3294C101.735 24.2416 101.621 22.8759 101.621 21.2324C101.621 19.589 101.735 18.2233 101.962 17.1355C102.189 16.0477 102.521 15.1829 102.96 14.5411C103.398 13.8994 103.926 13.4455 104.544 13.1794C105.163 12.9133 105.871 12.7803 106.669 12.7803C107.467 12.7803 108.176 12.9133 108.794 13.1794C109.412 13.4455 109.941 13.8994 110.379 14.5411C110.817 15.1829 111.15 16.0477 111.377 17.1355C111.604 18.2233 111.717 19.589 111.717 21.2324C111.717 22.8759 111.604 24.2416 111.377 25.3294C111.15 26.4172 110.817 27.282 110.379 27.9238ZM109.357 17.7577C109.193 16.8498 108.978 16.1298 108.712 15.5977C108.446 15.0655 108.133 14.6977 107.773 14.4942C107.413 14.2907 107.045 14.189 106.669 14.189C106.294 14.189 105.926 14.2907 105.566 14.4942C105.206 14.6977 104.893 15.0655 104.627 15.5977C104.361 16.1298 104.145 16.8498 103.981 17.7577C103.817 18.6655 103.734 19.8238 103.734 21.2324C103.734 22.6411 103.817 23.7994 103.981 24.7072C104.145 25.6151 104.361 26.3351 104.627 26.8672C104.893 27.3994 105.206 27.7672 105.566 27.9707C105.926 28.1742 106.294 28.2759 106.669 28.2759C107.045 28.2759 107.413 28.1742 107.773 27.9707C108.133 27.7672 108.446 27.3994 108.712 26.8672C108.978 26.3351 109.193 25.6151 109.357 24.7072C109.522 23.7994 109.604 22.6411 109.604 21.2324C109.604 19.8238 109.522 18.6655 109.357 17.7577ZM96.6909 21.9368H91.7605V29.4498H89.6475V13.0151H91.7605V20.2933H96.6909V13.0151H98.804V29.4498H96.6909V21.9368ZM85.5396 29.4498L82.6048 22.4064L79.67 29.4498H77.5569L81.0787 20.9977L77.9091 13.0151H80.0222L82.6048 19.589L85.1874 13.0151H87.3004L84.1309 20.9977L87.6526 29.4498H85.5396ZM68.283 13.0151H76.2656V14.6585H70.3961V20.0585H75.5613V21.702H70.3961V27.8064H76.2656V29.4498H68.283V13.0151ZM62.6483 29.4498H60.5352V14.6585H56.7787V13.0151H66.4048V14.6585H62.6483V29.4498Z" fill="white"/>
+                <defs>
+                  <filter id="filter0_i" x="0" y="0" width="220" height="47" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                    <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                    <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+                    <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+                    <feOffset dy="-5"/>
+                    <feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1"/>
+                    <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.24 0"/>
+                    <feBlend mode="normal" in2="shape" result="effect1_innerShadow"/>
+                  </filter>
+                </defs>
+            </svg>
+            
+          </a>
+        </div>
         <form method="get" action="https://echo.htmlacademy.ru">
           <input class="search-form" type="search" value="Поиск:">
         </form>
@@ -39,27 +59,27 @@
           и инструментов для ремонта
         </p>
 
-        <address class="adress-header">
+        <address class="header-adress address-info">
           <p class="header-tel"><a href="tel:+78125550555">+7 (812) 555-05-55</a></p>
-          <p class="header-address">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
+          <p class="header-address-text">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
         </address>
 
-        <div class="login-header">
-          <a class="btn-login" href="blank.html">Войти</a>
-          <a class="btn-registration" href="blank.html">Регистрация</a>
+        <div class="header-login">
+          <a class="btn-login content-login" href="blank.html">Войти</a>
+          <a class="btn-registration content-login" href="blank.html">Регистрация</a>
         </div>
       </div>
 
       <!--Нижняя часть шапки-->
       <nav class="navigation">
-        <ul class="list-navigation text-header-footer">
-          <li class="item-navigation"><a class="link-navigation link-nav">Главная</a></li>
-          <li class="item-navigation"><a class="link-navigation link-nav" href="blank.html">Компания</a></li>
-          <li class="item-navigation"><a class="link-navigation link-nav" href="catalog.html">Каталог</a></li>
-          <li class="item-navigation"><a class="link-navigation link-nav" href="blank.html">Новости</a></li>
-          <li class="item-navigation"><a class="link-navigation link-nav" href="blank.html">Спецпредложения</a></li>
-          <li class="item-navigation"><a class="link-navigation link-nav" href="blank.html">Доставка</a></li>
-          <li class="item-navigation"><a class="link-navigation link-nav" href="blank.html">Контакты</a></li>
+        <ul class="navigation-list">
+          <li class="navigation-item"><a class="navigation-link link-nav">Главная</a></li>
+          <li class="navigation-item"><a class="navigation-link link-nav" href="blank.html">Компания</a></li>
+          <li class="navigation-item"><a class="navigation-link link-nav" href="catalog.html">Каталог</a></li>
+          <li class="navigation-item"><a class="navigation-link link-nav" href="blank.html">Новости</a></li>
+          <li class="navigation-item"><a class="navigation-link link-nav" href="blank.html">Спецпредложения</a></li>
+          <li class="navigation-item"><a class="navigation-link link-nav" href="blank.html">Доставка</a></li>
+          <li class="navigation-item"><a class="navigation-link link-nav" href="blank.html">Контакты</a></li>
         </ul>
       </nav>
     </header>
@@ -70,24 +90,24 @@
 
       <section class="services">
         <h2>Услуги</h2>
-        <ul class="list-services">
-          <li class="item-services">
+        <ul class="services-list">
+          <li class="services-item services-item-materials">
             <h3 class="services-subtitle">Материалы</h3>
             <p class="btn-services"><a class="link-services link-btn-section" href="blank.html">На любой вкус</a></p>
           </li>
-          <li class="item-services">
+          <li class="services-item services-item-tool">
             <h3 class="services-subtitle">Инструмент</h3>
             <p class="btn-services"><a class="link-services link-btn-section" href="blank.html">На все случаи</a></p>
           </li>
-          <li class="item-services">
+          <li class="services-item services-item-technics">
             <h3 class="services-subtitle">Техника</h3>
             <p class="btn-services"><a class="link-services link-btn-section" href="blank.html">Для стройки</a></p>
           </li>
-          <li class="item-services">
+          <li class="services-item services-item-discounts">
             <h3 class="services-subtitle">Скидки 50%</h3>
             <p class="btn-services"><a class="link-services link-btn-section" href="blank.html">На 350 товаров</a></p>
           </li>
-          <li class="item-services">
+          <li class="services-item services-item-delivery">
             <h3 class="services-subtitle">Доставка</h3>
             <p class="btn-services"><a class="link-services link-btn-section" href="blank.html">Бесплатно</a></p>
           </li>
@@ -107,8 +127,10 @@
       </section>
 
       <section class="popular-products">
-        <h2 class="title-popular-products parameters">Популярные товары:</h2>
-        <a class="link-all-product link-btn-section" href="blank.html">Все популярные товары</a>
+        <div class="section-saber">
+          <h2 class="title-popular-products parameters">Популярные товары:</h2>
+          <a class="link-all-product link-btn-section" href="blank.html">Все популярные товары</a>
+        </div>
         <ul class="list-popular-products">
           <li class="item-popular-products">
             <img src="img/produkt/bfg9000.jpg" width="184" height="164" alt="Перфоратор BOSCH BFG 9000">
@@ -146,8 +168,10 @@
       </section>
 
       <section class="popular-manufacturers">
-        <h2 class="title-manufacturers parameters">Популярные производители:</h2>
-        <a class="link-manufacturers link-btn-section" href="blank.html">Все производители</a>
+        <div class="section-saber">
+          <h2 class="title-manufacturers parameters">Популярные производители:</h2>
+          <a class="link-manufacturers link-btn-section" href="blank.html">Все производители</a>
+        </div>
         <ul>
           <li><a href="blank.html"><img src="img/manufacturers/bosch.png" width="126" height="37" alt="производитель bosch"></a></li>
           <li><a href="blank.html"><img src="img/manufacturers/makita.png" width="123" height="40" alt="производитель makita"></a></li>
@@ -165,21 +189,21 @@
         <p class="text-services-offers text-company">Хороший интернет-магазин отличается от плохого не только ценами! <br>
          Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.</p>
 
-        <ul class="list-services-offers">
+        <ul class="services-offers-list">
           <li class="item-offers-click item-offers">Доставка</li>
           <li class="item-services-offers item-offers">Гарантия</li>
           <li class="item-services-offers item-offers">Кредит</li>
         </ul>
 
-        <ul class="list-services-tabs">
-          <li class="item-services-tabs">
+        <ul class="services-tabs-list">
+          <li class="services-tabs-item">
             <h3 class="title-services-delivery parameters">Доставка</h3>
             <p class="text-services-offers text-compan">Мы с удовольствием доставим ваш товар прямо<br>
             к вашему подъезду совершенно бесплатно!<br>
             Ведь мы неплохо заработаем,<br>
             поднимая его на ваш этаж!</p>
           </li>
-          <li class="item-services-tabs">
+          <li class="services-tabs-item">
             <h3 class="title-services-guarantee parameters">Гарантия</h3>
             <p class="text-services-offers text-compan">Если купленный у нас товар поломается или заискрит,<br>
              а также в случае пожара, спровоцированного его<br>
@@ -187,7 +211,7 @@
              гарантии. Мы обменяем сгоревший товар на новый.<br>
              Дом уж восстановите как-нибудь сами.</p>
           </li>
-          <li class="item-services-tabs">
+          <li class="services-tabs-item">
             <h3 class="title-services-credit parameters">Кредит</h3>
             <p class="text-services-offers text-compan">Залезть в долговую яму стало проще! <br>
             Кредитные консультанты придут вам на помощь.</p>
@@ -224,40 +248,40 @@
       <!--Верхняя часть подвала-->
       <div class="footer-top">
         <a><img src="img/logo/logo-footer.svg" width="220" height="68" alt="logotip"></a>
-        <address class="footer-address">
+        <address class="footer-address address-info">
           <p class="text-address link-nav">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8<br><a class="link-footer-tel" href="tel:+78125550555">+7 (812) 555-05-55</a></p>
         </address>
-        <nav class="navigation-footer">
-          <ul class="list-navigation-footer">
-            <li><a class="link-navigation-footer link-nav" href="blank.html">Компания</a></li>
-            <li><a class="link-navigation-footer link-nav" href="blank.html">Новости</a></li>
-            <li><a class="link-navigation-footer link-nav" href="catalog.html">Каталог</a></li>
-            <li><a class="link-navigation-footer link-nav" href="blank.html">Доставка</a></li>
-            <li><a class="link-navigation-footer link-nav" href="blank.html">Контакты</a></li>
+        <nav class="footer-navigation">
+          <ul class="footer-navigation-list">
+            <li><a class="footer-navigation-link link-nav" href="blank.html">Компания</a></li>
+            <li><a class="footer-navigation-link link-nav" href="blank.html">Новости</a></li>
+            <li><a class="footer-navigation-link link-nav" href="catalog.html">Каталог</a></li>
+            <li><a class="footer-navigation-link link-nav" href="blank.html">Доставка</a></li>
+            <li><a class="footer-navigation-link link-nav" href="blank.html">Контакты</a></li>
           </ul>
         </nav>
         <nav>
-          <ul class="list-product-footer">
-            <li><a class="link-product-footer link-nav" href="blank.html">Материалы</a></li>
-            <li><a class="link-product-footer link-nav" href="blank.html">Техника</a></li>
-            <li><a class="link-product-footer link-nav" href="catalog.html">Инструмент</a></li>
-            <li><a class="link-product-footer link-nav" href="blank.html">Спецпредложения</a></li>
+          <ul class="footer-list-product">
+            <li><a class="footer-link-product link-nav" href="blank.html">Материалы</a></li>
+            <li><a class="footer-link-product link-nav" href="blank.html">Техника</a></li>
+            <li><a class="footer-link-product link-nav" href="catalog.html">Инструмент</a></li>
+            <li><a class="footer-link-product link-nav" href="blank.html">Спецпредложения</a></li>
           </ul>
         </nav>
       </div>
 
       <!--Нижняя часть-->
       <div class="footer-bottom">
-        <p class="text-Copyright footer-text-info">© 2010–2019 Компания «Техномарт»<br>Все права защищены</p>
+        <p class="text-Copyright text-info-contact">© 2010–2019 Компания «Техномарт»<br>Все права защищены</p>
         <section>
-          <h2 class="text-social-network">Социальные сети</h2>
+          <h2 class="text-social-network hiding-content">Социальные сети</h2>
           <ul class="list-social-network">
             <li>
               <a class="link-social-network" href="#">
                 <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path fill-rule="evenodd" clip-rule="evenodd" d="M22.1627 1.4839C33.6533 1.4839 42.9683 10.5873 42.9683 21.8169C42.9683 33.0461 33.6533 42.1494 22.1627 42.1494C10.6721 42.1494 1.35714 33.0461 1.35714 21.8169C1.35714 10.5873 10.6721 1.4839 22.1627 1.4839Z" fill="#212A3A"/>
                 <path d="M24.5403 25.7281C25.4609 25.4384 26.6395 27.6406 27.8943 28.4834C28.836 29.1219 29.5573 28.9841 29.5573 28.9841L32.9017 28.9372C32.9017 28.9372 34.6495 28.8322 33.8232 27.4803C33.7549 27.3678 33.3389 26.4781 31.334 24.6472C29.2376 22.7319 29.5217 23.0422 32.0456 19.7309C33.5835 17.7125 34.1988 16.4797 34.0062 15.9547C33.8213 15.4494 32.6918 15.5806 32.6918 15.5806L28.9237 15.6059C28.5568 15.6069 28.2458 15.7175 28.1042 16.0887C28.1013 16.0925 27.5062 17.6506 26.7127 18.9753C25.0362 21.7775 24.3669 21.9266 24.0896 21.7512C23.4531 21.3453 23.6139 20.1228 23.6139 19.2537C23.6139 16.5378 24.0299 15.4053 22.7992 15.1128C22.388 15.0153 22.0876 14.9516 21.0389 14.9422C19.6985 14.9225 18.5603 14.9422 17.9151 15.2506C17.4866 15.4597 17.1582 15.9181 17.3575 15.9444C17.6079 15.9772 18.1693 16.0944 18.4697 16.4937C18.8559 17.0112 18.8443 18.1709 18.8443 18.1709C18.8443 18.1709 19.0649 21.3687 18.3243 21.7653C17.8159 22.0372 17.1206 21.4822 15.6252 18.9378C14.8615 17.6366 14.2847 16.1984 14.2847 16.1984C14.2847 16.1984 14.173 15.9312 13.9708 15.785C13.73 15.6116 13.393 15.5562 13.393 15.5562L9.81656 15.5787C9.81656 15.5787 9.27923 15.5937 9.08182 15.8244C8.90656 16.0287 9.06738 16.4506 9.06738 16.4506C9.06738 16.4506 11.8686 22.9016 15.0406 26.1509C17.9488 29.1341 21.2537 28.9362 21.2537 28.9362H22.7511C22.7511 28.9362 23.2027 28.8856 23.4338 28.6437C23.6495 28.4187 23.6399 27.9959 23.6399 27.9959C23.6399 27.9959 23.61 26.0187 24.5403 25.7281Z" fill="white"/>
-                </svg> Вконтакте
+                </svg> <span class="hiding-content">Вконтакте</span>
               </a>
             </li>
             <li>
@@ -265,7 +289,7 @@
                 <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path fill-rule="evenodd" clip-rule="evenodd" d="M21.8938 1.4839C33.1232 1.4839 42.2265 10.5873 42.2265 21.8169C42.2265 33.0461 33.1232 42.1494 21.8938 42.1494C10.6643 42.1494 1.56108 33.0461 1.56108 21.8169C1.56108 10.5873 10.6643 1.4839 21.8938 1.4839Z" fill="#212A3A"/>
                 <path d="M28 15V11H24C21.7909 11 20 12.7909 20 15V19H16V23H20V33H24V23H28V19H24V15H28Z" fill="white"/>
-                </svg> Фейсбук
+                </svg> <span class="hiding-content">Фейсбук</span>
               </a>
             </li>
             <li>
@@ -273,20 +297,20 @@
                 <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path fill-rule="evenodd" clip-rule="evenodd" d="M22.1627 1.4839C33.6533 1.4839 42.9683 10.5873 42.9683 21.8169C42.9683 33.0461 33.6533 42.1494 22.1627 42.1494C10.6721 42.1494 1.35714 33.0461 1.35714 21.8169C1.35714 10.5873 10.6721 1.4839 22.1627 1.4839Z" fill="#212A3A"/>
                 <path d="M24.5403 25.7281C25.4609 25.4384 26.6395 27.6406 27.8943 28.4834C28.836 29.1219 29.5573 28.9841 29.5573 28.9841L32.9017 28.9372C32.9017 28.9372 34.6495 28.8322 33.8232 27.4803C33.7549 27.3678 33.3389 26.4781 31.334 24.6472C29.2376 22.7319 29.5217 23.0422 32.0456 19.7309C33.5835 17.7125 34.1988 16.4797 34.0062 15.9547C33.8213 15.4494 32.6918 15.5806 32.6918 15.5806L28.9237 15.6059C28.5568 15.6069 28.2458 15.7175 28.1042 16.0887C28.1013 16.0925 27.5062 17.6506 26.7127 18.9753C25.0362 21.7775 24.3669 21.9266 24.0896 21.7512C23.4531 21.3453 23.6139 20.1228 23.6139 19.2537C23.6139 16.5378 24.0299 15.4053 22.7992 15.1128C22.388 15.0153 22.0876 14.9516 21.0389 14.9422C19.6985 14.9225 18.5603 14.9422 17.9151 15.2506C17.4866 15.4597 17.1582 15.9181 17.3575 15.9444C17.6079 15.9772 18.1693 16.0944 18.4697 16.4937C18.8559 17.0112 18.8443 18.1709 18.8443 18.1709C18.8443 18.1709 19.0649 21.3687 18.3243 21.7653C17.8159 22.0372 17.1206 21.4822 15.6252 18.9378C14.8615 17.6366 14.2847 16.1984 14.2847 16.1984C14.2847 16.1984 14.173 15.9312 13.9708 15.785C13.73 15.6116 13.393 15.5562 13.393 15.5562L9.81656 15.5787C9.81656 15.5787 9.27923 15.5937 9.08182 15.8244C8.90656 16.0287 9.06738 16.4506 9.06738 16.4506C9.06738 16.4506 11.8686 22.9016 15.0406 26.1509C17.9488 29.1341 21.2537 28.9362 21.2537 28.9362H22.7511C22.7511 28.9362 23.2027 28.8856 23.4338 28.6437C23.6495 28.4187 23.6399 27.9959 23.6399 27.9959C23.6399 27.9959 23.61 26.0187 24.5403 25.7281Z" fill="white"/>
-                </svg> Инстаграм
+                </svg><span class="hiding-content">Инстаграм</span>
               </a>
             </li>
           </ul>
         </section>
-        <address class="footer-bottom-email">
-          <p class="text-email footer-text-info">Обратная связь:<br> <a class="link-email footer-text-info" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a></p>
-          <p class="text-site footer-text-info">Разработано —<br><a class="link-site footer-text-info" href="https://htmlacademy.ru/intensive/htmlcss">htmlacademy.ru</a></p>
+        <address class="footer-bottom-email address-info">
+          <p class="text-email text-info-contact">Обратная связь:<br> <a class="link-email text-info-contact" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a></p>
+          <p class="text-site text-info-contact">Разработано —<br><a class="link-site text-info-contact" href="https://htmlacademy.ru/intensive/htmlcss">htmlacademy.ru</a></p>
         </address>
       </div>
     </footer>
 
     <section class="write-us">
-      <h2 class="title-write-us">Напишите нам</h2>
+      <h2 class="title-write-us hiding-content">Напишите нам</h2>
       <form action="https://echo.htmlacademy.ru" method="post">
 
         <label class="label-name link-nav" for="name">Ваше имя:</label>

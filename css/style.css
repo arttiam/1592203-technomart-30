@@ -27,6 +27,7 @@
   --basic-dark-blue: #1d2739;
   --very-light-orange:#ffd180;
   --light-grayish-blue: #f1f5f7;
+  --light-white: #f1f5f7;
 }
 
 @font-face {
@@ -34,35 +35,35 @@
   font-weight: 400;
   font-style: normal;
   src:  local("Cuprum"),
-        url(fonts/cuprum.woff2) format("woff2"),
-        url(fonts/cuprum.woff) format("woff");
+        url("../fonts/cuprum.woff2") format("woff2"),
+        url("../fonts/cuprum.woff") format("woff");
 }
 
 @font-face {
-  font-family: "Cuprum Bold";
+  font-family: "Cuprum";
   font-weight: 700;
   font-style: normal;
   src:  local("Cuprum Bold"),
-        url(fonts/cuprumbold.woff2) format("woff2"),
-        url(fonts/cuprumbold.woff) format("woff");
+        url("../fonts/cuprumbold.woff2") format("woff2"),
+        url("fonts/cuprumbold.woff") format("woff");
 }
 
 @font-face {
-  font-family: "Cuprum Italic";
+  font-family: "Cuprum";
   font-weight: 400;
   font-style: italic;
   src:  local("Cuprum Italic"),
-        url(fonts/cuprumitalic.woff2) format("woff2"),
-        url(fonts/cuprumitalic.woff) format("woff");
+        url("../fonts/cuprumitalic.woff2") format("woff2"),
+        url("../fonts/cuprumitalic.woff") format("woff");
 }
 
 @font-face {
-  font-family: "PT Sans Bold";
+  font-family: "PT Sans";
   font-weight: 700;
   font-style: normal;
   src:  local("PT Sans Bold"),
-        url(fonts/ptsansbold.woff2) format("woff2"),
-        url(fonts/ptsansbold.woff) format("woff");
+        url("../fonts/ptsansbold.woff2") format("woff2"),
+        url("../fonts/ptsansbold.woff") format("woff");
 }
 
 @font-face {
@@ -70,21 +71,24 @@
   font-weight: 400;
   font-style: normal;
   src:  local("PT Sans"),
-        url(fonts/ptsans.woff2) format("woff2"),
-        url(fonts/ptsans.woff) format("woff");
+        url("../fonts/ptsans.woff2") format("woff2"),
+        url("../fonts/ptsans.woff") format("woff");
 }
 
 .page-body {
   min-width: 960px;
   margin: 0;
   padding: 0;
+  font-family: "PT Sans", "Arial", sans-serif;
+  font-size: 13px;
+  line-height: 24px;
 }
 
 a {
   text-decoration: none;
 }
 
-address {
+.address-info {
   font-style: normal;
 }
 
@@ -114,7 +118,7 @@ address {
   line-height: 24px;
 }
 
-.link-navigation,
+.navigation-link,
 .link-menu,
 .menu-header {
   color: var(--basic-white);
@@ -147,26 +151,30 @@ address {
 }
 
 .info-text {
-  font-family: "Cuprum Italic", "Arial", sans-serif;
+  font-family: "Cuprum", "Arial", sans-serif;
+  font-style: italic;
   font-size: 16px;
   line-height: 23px;
   color: var(--bright-red);
 }
 
 .header-tel a {
-  font-family: "Cuprum Bold", "Arial", sans-serif;
+  font-family: "Cuprum", "Arial", sans-serif;
+  font-weight: 700;
+  font-style: normal;
   font-size: 21px;
   line-height: 30px;
   color: var(--bright-red);
 }
 
-.header-address {
+.header-address-text {
   font-family: "Cuprum", "Arial", sans-serif;
   font-size: 14px;
   line-height: 24px;
+  color: var(--dark-desaturated-blue);
 }
 
-.btn-login, .btn-registration {
+.content-login {
   font-family: "Cuprum", "Arial", sans-serif;
   color: var(--basic-black);
   font-size: 21px;
@@ -185,7 +193,7 @@ address {
 
 /*navigation*/
 
-.list-navigation {
+.navigation-list {
   list-style: none;
 }
 
@@ -194,24 +202,30 @@ address {
   box-shadow: inset 0px -5px 0px var(--extra-desaturated-blue);
 }
 
-.link-navigation:hover {
+.navigation-link:hover {
   background-color: var(--extra-desaturated-blue);
   box-shadow: inset 0px -5px 0px var(--extra-desaturated-blue);
 }
 
-.link-navigation:active {
+.navigation-link:active {
   background-color: var(--basic-dark-blue);
   box-shadow: inset 0px -5px 0px var(--extra-desaturated-bluer);
 }
 
 /*services*/
-/*list-services*/
+/*services-list*/
 
 .link-btn-section {
   font-family: "Cuprum", "Arial", sans-serif;
   font-size: 14px;
   line-height: 18px;
   text-transform: uppercase;
+}
+
+.services-subtitle {
+  font-family: "Cuprum", "Arial", sans-serif;
+  font-size: 24px;
+  line-height: 30px;
 }
 
 .link-services {
@@ -228,40 +242,43 @@ address {
 }
 
 .list-tool-slide,
-.list-services {
+.services-list {
   color: var(--basic-white);
 }
 
 .service-subtitle {
-  font-family: "Cuprum Bold", "Arial", sans-serif;
+  font-family: "Cuprum", "Arial", sans-serif;
+  font-weight: 700;
+  font-style: normal;
   font-size: 24px;
   line-height: 30px;
 }
 
-.list-services li:nth-of-type(1){
+.services-item-materials{
   background-color: var(--light-orange);
 }
 
-.list-services li:nth-of-type(2){
+.services-item-tool{
   background-color: var(--bright-cyan);
 }
 
-.list-services li:nth-of-type(3){
+.services-item-technics{
   background-color: var(--very-soft-magenta);
 }
 
-.list-services li:nth-of-type(4){
+.services-item-discounts{
   background-color: var(--slightly-desaturated-lime-green);
 }
 
-.list-services li:nth-of-type(5){
+.services-item-delivery{
   background-color: var(--basic-light-orange);
 }
 
 /*list-tool-slide*/
 
 .tool-subtitle {
-  font-family: "Cuprum Bold", "Arial", sans-serif;
+  font-family: "Cuprum", "Arial", sans-serif;
+  font-weight: 700;
   font-size: 36px;
   line-height: 36px;
   text-transform: uppercase;
@@ -287,6 +304,10 @@ address {
 }
 
 /*popular-products*/
+
+.section-saber {
+  background-color: var(--light-grayish-orange);
+}
 
 .parameters {
   font-family: "Cuprum", "Arial", sans-serif;
@@ -324,7 +345,8 @@ address {
 }
 
 .caption-product {
-  font-family: "PT Sans Bold","Arial", sans-serif;
+  font-family: "PT Sans","Arial", sans-serif;
+  font-weight: 700;
   font-size: 18px;
   line-height: 20px;
   text-align: center;
@@ -335,7 +357,8 @@ address {
 }
 
 .old-price {
-  font-family: "PT Sans Bold","Arial", sans-serif;
+  font-family: "PT Sans","Arial", sans-serif;
+  font-weight: 700;
   font-size: 17px;
   line-height: 18px;
   text-align: center;
@@ -345,7 +368,8 @@ address {
 }
 
 .price-product {
-  font-family: "PT Sans Bold","Arial", sans-serif;
+  font-family: "PT Sans","Arial", sans-serif;
+  font-weight: 700;
   font-size: 17px;
   line-height: 18px;
   text-align: center;
@@ -380,6 +404,10 @@ address {
   background-color: var(--light-grayish-blue);
 }
 
+.item-services-offers:hover {
+  background-color: var(--extra-desaturated-blue);
+}
+
 .text-company {
   font-family: "PT Sans","Arial", sans-serif;
   font-size: 13px;
@@ -392,8 +420,8 @@ address {
   color: var(--dark-desaturated-blue);
 }
 
-.list-services-offers,
-.list-services-tabs {
+.services-offers-list,
+.services-tabs-list {
   list-style: none;
 }
 
@@ -411,7 +439,8 @@ address {
 }
 
 .item-offers {
-  font-family: "Cuprum Bold", "Arial", sans-serif;
+  font-family: "Cuprum", "Arial", sans-serif;
+  font-weight: 700;
   font-size: 21px;
   line-height: 30px;
 }
@@ -473,19 +502,19 @@ address {
   background-color: var(--extra-desaturated-blue);
 }
 
-.link-navigation-footer,
+.footer-navigation-link,
 .link-social-network {
-  color: var(--basic-white);
+  color: var(--light-white);
 }
 
-.link-product-footer {
+.footer-link-product {
   color: var(--very-light-orange);
 }
 
 
 
-.list-navigation-footer,
-.list-product-footer,
+.footer-navigation-list,
+.footer-list-product,
 .list-social-network {
   list-style: none;
 }
@@ -497,20 +526,37 @@ address {
   color: var(--basic-white);
 }
 
+.footer-navigation-link:hover,
+.footer-link-product:hover,
+.link-email:hover,
+.link-site:hover {
+  text-decoration: underline;
+}
+
+.footer-navigation-link:active,
+.footer-link-product:active {
+  mix-blend-mode: normal;
+  opacity: 0.5;
+}
+
+.link-email:active,
+.link-site:active {
+  color: var(--bright-red);
+}
+
 /*pop-up-write*/
 
 .link-site, .link-email {
   color: var(--very-light-orange);
 }
 
-.footer-text-info {
+.text-info-contact {
   font-family: "Cuprum", "Arial", sans-serif;
   font-size: 16px;
   line-height: 18px;
 }
 
-.text-social-network,
-.title-write-us {
+.hiding-content {
   display: none;
 }
 
