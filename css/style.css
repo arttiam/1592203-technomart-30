@@ -460,7 +460,7 @@ a {
 }
 
 .link-btn-credit:hover {
-  background-color: var(--strong-red);
+  background-color: var(--bright-red);
 }
 
 .link-btn-credit:active {
@@ -713,6 +713,12 @@ a {
   border-bottom: 1px dotted var(--bright-red) ;
 }
 
+/*about-perforator*/
+
+.about-perforator {
+  background-color: var(--light-grayish-blue);
+}
+
 /*popup-cart*/
 .product-added-text{
   font-family: "Cuprum", "Arial", sans-serif;
@@ -723,6 +729,7 @@ a {
 
 .oval {
   height: 66px;
+  padding-left: 70px;
   background: url("../img/decaractive/oval.svg") no-repeat;
 }
 
