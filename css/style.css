@@ -31,6 +31,8 @@
   --light-beige: #f7f3ec;
   --light-gray-white: #f2f6f8;
   --light-extra-gray: #e5e5e5;
+  --light-green: #367315;
+  --dark-green: #518534;
 }
 
 @font-face {
@@ -373,6 +375,44 @@ a {
   text-transform: uppercase;
 }
 
+.btn-bookmark {
+  width: 135px;
+  height: 38px;
+  background-color: var(--basic-white);
+  text-decoration: none;
+  border: 3px solid var(--dark-moderate-green);
+  border-radius: 2px;
+  color: var(--dark-desaturated-blue);
+
+}
+
+.btn-bookmark:hover {
+  border: 3px solid var(--dark-desaturated-blue);
+}
+
+.btn-bookmark:active {
+  opacity: 0.5;
+}
+
+.btn-buy {
+  width: 135px;
+  height: 38px;
+  background-color: var(--dark-moderate-green);
+  text-decoration: none;
+  color: var(--basic-white);
+  box-shadow: inset 0px -3px 0px var(--light-green);
+  border: none;
+  border-radius: 2px;
+}
+
+.btn-buy:hover {
+  background-color: var(--strong-green);
+}
+
+.btn-buy:active {
+  background-color: var(--dark-green);
+}
+
 .caption-product {
   font-family: "PT Sans","Arial", sans-serif;
   font-weight: 700;
@@ -624,6 +664,14 @@ a {
 }
 
 /*Filter*/
+
+.btn-submit {
+  width: 220px;
+  height: 38px;
+  text-decoration: none;
+  background-color: var(--basic-white);
+  border: 1px solid var(--light-extra-gray);
+}
 
 .title-filter {
   font-family: "PT Sans", "Arial", sans-serif;
