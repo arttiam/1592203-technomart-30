@@ -86,7 +86,7 @@
   height: 100%;
 }
 
-.centering-block {
+.container {
   width: 940px;
   margin: 0 auto;
   padding: 0 10px;
@@ -287,6 +287,11 @@ a {
 .name-user-text,
 .may-orsers-text {
   text-align: center;
+  margin-bottom: 0;
+}
+
+.may-orsers-text {
+  margin-top: 0;
 }
 
 .header-tel a {
@@ -328,9 +333,7 @@ a {
   margin-top: 46px;
 }
 
-.header-authorized-user {
 
-}
 
 .btn-login,
 .btn-registration {
@@ -366,12 +369,11 @@ a {
 /*navigation*/
 
 .navigation-list {
-  display: grid;
-  grid-template-columns: 122px 122px 122px 122px 174px 122px 122px;
+  display: flex;
   list-style: none;
-  width: 766px;
-  padding-left: 17px;
+  justify-content: center;
   margin: 0;
+  padding: 0;  
 }
 
 .info-header-navigation {
@@ -393,6 +395,8 @@ a {
   display: block;
   text-align: center;
   padding-top: 15px;
+  padding-left: 30px;
+  padding-right: 30px;
   height: 45px;
 
 }
@@ -478,7 +482,7 @@ a {
 
 .services-blok {
   display: grid;
-  grid-template-columns: 300px 300px 300px;
+  grid-template-columns: repeat(3, 300px);
   gap: 20px;
 }
 
@@ -553,7 +557,19 @@ a {
 
 .section-saber {
   background-color: var(--light-grayish-orange);
-  grid-column: 1/5;
+  
+}
+
+.title-popular-products,
+.title-manufacturers {
+  margin: 0;
+}
+
+.popular-products,
+.popular-manufacturers {
+  display: grid;
+  grid-template-rows: 89px 1fr;
+  gap: 20px;
 }
 
 .parameters {
@@ -572,7 +588,7 @@ a {
 
 .list-popular-products {
   display: grid;
-  grid-template-columns: 220px 220px 220px 220px;
+  grid-template-columns: repeat(4, 220px);
   gap: 20px;
   list-style: none;
   padding: 0;
@@ -945,13 +961,60 @@ a {
 
 /*catalog*/
 
+.main-content {
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  align-content: start;
+  gap: 20px;
+}
+
+
+
 .title-perforator {
   color: var(--dark-desaturated-blue);
   background-color: var(--light-gray-white);
 }
 
+
 .breadcrumbs-link {
   color: var(--basic-black);
+}
+
+.breadcrumbs-catalog {
+  grid-column: 1/-1;
+}
+
+.breadcrumbs-list {
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.breadcrumbs-item {
+  margin-right: 15px;
+}
+
+.title-perforator {
+  grid-column: 1/-1;
+}
+
+.catalog-fiter-caption {
+  grid-column: 1/1;
+}
+
+.catalog-fiter  {
+  grid-column: 1/1;
+}
+
+.sorting {
+  grid-column: 2/-1;
+  display: flex;
+  height: 38px;
+  border-radius: 2px;;
+}
+
+.sorting-text {
+  margin: 0 140px 0 20px;
 }
 
 /*breadcrumbs-catalog*/
@@ -1021,6 +1084,24 @@ a {
   list-style: none;
 }
 
+/*list-perforators*/
+
+.list-perforators {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+}
+
+.item-products {
+  width: 220px;
+  min-height: 318px;
+  margin-bottom: 20px;
+  min-height: 318px;
+  border: 1px solid var(--light-black);
+}
+
 /*pagination*/
 .pagination-link-current {
   background-color: var(--bright-red);
@@ -1029,18 +1110,51 @@ a {
   border-radius: 2px;
 }
 
+.pagination {
+  grid-column: 2/-1;
+}
+
+.pagination-list {
+  display: flex;
+  padding: 0;
+  margin: 0;
+}
+
+.pagination-link-current,
+.pagination-link,
+.pagination-link-next {
+  margin-right: 10px;
+  display: block;
+}
+
+.pagination-link-current,
 .pagination-link {
+  width: 8px;
+  height: 18px;
+  padding: 10px 15px;
+}
+
+.pagination-link-next {
+  width: 77px;
+  height: 18px;
+  padding: 10px 32px 10px 31px;
+}
+
+.pagination-link,
+.pagination-link-next {  
   background-color: var(--basic-white);
   color: var(--basic-black);
   border: 1px solid var(--light-gray);
   border-radius: 2px;
 }
 
-.pagination-link:hover {
+.pagination-link:hover,
+.pagination-link-next:hover {
   border: 1px solid var(--light-extra-gray);
 }
 
-.pagination-link:active {
+.pagination-link:active,
+.pagination-link-next:active {
   border: 1px solid var(--bright-red);
 }
 
@@ -1077,8 +1191,22 @@ a {
 
 /*about-perforator*/
 
-.about-perforator {
+.about-perforator-bar {
+  min-height: 197px;
   background-color: var(--light-grayish-blue);
+}
+
+.about-perforator-title {
+  margin: 0;
+}
+
+.about-perforator-text {
+  margin-top: 25px;
+}
+
+.about-perforator {
+  min-height: 197px;
+  padding-top: 64px;
 }
 
 /*popup-cart*/
