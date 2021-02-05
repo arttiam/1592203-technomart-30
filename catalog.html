@@ -110,7 +110,7 @@
       </header>
 
       <main class="page-catalog">
-        <section class="main-content container">
+        <div class="main-content container">
 
           <div class="breadcrumbs-catalog">
             <ul class="breadcrumbs-list">
@@ -133,37 +133,17 @@
 
           <h1 class="title-perforator parameters">Перфораторы</h1>
 
-          <p class="subject-catalog catalog-fiter-caption">Фильтр:</p>
-
-          <section class="sorting">
-            <h2 class="hiding-content">Сортировка</h2>
-            <p class="subject-catalog sorting-text">Сортировка:</p>
-            <ul class="sorting-list breadcrumbs-list">
-              <li><a class="sorting-item-price sorting-item-current subject-catalog" href="#">По цене</a></li>
-              <li><a class="sorting-item-type sorting-item subject-catalog" href="#">По типу</a></li>
-              <li><a class="sorting-item-functionality sorting-item subject-catalog" href="#">По функционалу</a></li>
-            </ul>
-            <ul class="sorting-price breadcrumbs-list">
-              <li>
-                <a class="descending-order" href="#">По убыванию</a>
-              </li>
-              <li>
-                <a class="ascending-order" href="#">По возрастанию</a>
-              </li>
-            </ul>
-          </section>
-
-          <section class="catalog-fiter">
-            <h2 class="hiding-content">Фильтр</h2>
+          <div class="catalog-filter">
+            <p class="subject-catalog catalog-filter-caption">Фильтр:</p>
             <form method="get" action="https://echo.htmlacademy.ru">
 
-              <fieldset>
+              <fieldset class="fieldset-filter price-filter">
                 <legend class="title-filter">Цена:</legend>
                 <div class="range-price"><input type="range" min="0" max="30000"></div>
                 <p><span class="range-text">0</span> - <span class="range-text">30000</span></p>
               </fieldset>
 
-              <fieldset>
+              <fieldset class="fieldset-filter">
                 <legend class="title-filter">Производители:</legend>
                 <ul class="list-hiding list-hiding">
                   <li>
@@ -188,7 +168,7 @@
                   </li>
                 </ul>
               </fieldset>
-              <fieldset>
+              <fieldset class="fieldset-filter">
                 <legend class="title-filter">Питание:</legend>
                 <ul class="list-hiding">
                   <li>
@@ -203,10 +183,26 @@
               </fieldset>
               <button class="btn-submit subject-catalog" type="submit">Показать</button>
             </form>
-          </section>
+          </div>
 
-          <section >
+          <section class="main-list-perforators">
             <h2 class="hiding-content">Список перфораторов</h2>
+            <div class="sorting">
+              <p class="subject-catalog sorting-text">Сортировка:</p>
+              <ul class="sorting-list breadcrumbs-list">
+                <li><a class="sorting-item-price sorting-item-current subject-catalog" href="#">По цене</a></li>
+                <li><a class="sorting-item-type sorting-item subject-catalog" href="#">По типу</a></li>
+                <li><a class="sorting-item-functionality sorting-item subject-catalog" href="#">По функционалу</a></li>
+              </ul>
+              <ul class="sorting-price breadcrumbs-list">
+                <li>
+                  <a class="descending-order" href="#">По убыванию</a>
+                </li>
+                <li>
+                  <a class="ascending-order" href="#">По возрастанию</a>
+                </li>
+              </ul>
+            </div>
             <ul class="list-perforators list-hiding">
               <li class="item-products">
                 <img src="img/produkt/bfg6000.jpg" width="144" height="128" alt="Перфоратор BOSCH BFG 6000">
@@ -281,16 +277,15 @@
             </ul>
           </section>
 
-          <section class="pagination">
-            <h2 class="title-pagination hiding-content">Пагинация</h2>
+          <div class="pagination">
             <ul class="pagination-list list-hiding">
               <li><a class="pagination-link-current subject-catalog" href="#">1</a></li>
               <li><a class="pagination-link subject-catalog" href="#">2</a></li>
               <li><a class="pagination-link subject-catalog" href="#">3</a></li>
               <li><a class="pagination-link-next subject-catalog" href="#">Следующая</a></li>
             </ul>
-          </section>
-        </section>
+          </div>
+        </div>
 
         <div class="about-perforator-bar">
           <section class="about-perforator container">
