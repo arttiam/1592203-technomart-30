@@ -595,11 +595,6 @@ a {
   color: var(--basic-white)
 }
 
-.item-popular-products {
-  min-height: 318px;
-  border: 1px solid var(--light-black);
-}
-
 .link-all:hover {
   background-color: var(--strong-red);
 }
@@ -1137,7 +1132,6 @@ a {
 }
 
 .product-item {
-  width: 220px;
   min-height: 318px; 
   border: 1px solid var(--light-black);
 }
