@@ -1128,7 +1128,7 @@ a {
 
 /*list-perforators*/
 
-.product-list {
+.catalog-list {
   display: grid;
   grid-template-columns: repeat(3, 220px);
   gap: 20px;
@@ -1138,8 +1138,7 @@ a {
 
 .product-item {
   width: 220px;
-  min-height: 318px;
-  min-height: 318px;
+  min-height: 318px; 
   border: 1px solid var(--light-black);
 }
 
