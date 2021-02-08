@@ -140,6 +140,7 @@ a {
   grid-template-columns: 220px 270px 1fr;
   height: 42px;
   background-color: var(--extra-desaturated-blue);
+
 }
 
 .list-menu {
@@ -251,6 +252,7 @@ a {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   align-content: start;
+  padding: 46px 0 44.5px 30px;
 }
 
 .info-text {
@@ -258,9 +260,8 @@ a {
   font-style: italic;
   font-size: 16px;
   line-height: 23px;
-  color: var(--bright-red);
-  margin-top: 46px;
-  margin-bottom: 44.5px;
+  color: var(--bright-red);  
+  margin: 0;
 }
 
 .header-adress {
@@ -307,8 +308,7 @@ a {
   text-align: center;
   border: 3px solid var(--basic-white);
   height: 32px;
-  margin-top: 46px;
-  margin-bottom: 3px;
+  margin: 0;
   padding-top: 7px;
 }
 
@@ -331,7 +331,8 @@ a {
   list-style: none;
   justify-self: center;
   display: flex;
-  margin-top: 46px;
+  padding: 0;
+  margin: 0;
 }
 
 
