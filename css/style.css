@@ -402,7 +402,7 @@ a {
   padding-top: 15px;
   padding-left: 30px;
   padding-right: 30px;
-  height: 45px;
+  min-height: 45px;
 
 }
 
@@ -437,15 +437,13 @@ a {
 }
 
 .link-services {
-  display: block;
+  display: inline-block;
   background-color: var(--semi-transparent-white);
   color: var(--basic-white);
-}
-
- .link-services {
-  max-width: 135px; 
+  min-width: 135px; 
   padding: 10px 22px;
   text-align: center;
+  box-sizing: border-box;
 }
 /*
 .services-item-tool .link-services {
@@ -486,7 +484,7 @@ a {
   color: var(--basic-white);
   list-style: none;
   padding:0;
-  margin: 0;
+  margin:0;
 }
 
 .categories {
@@ -513,14 +511,9 @@ a {
 
 
 .services-item {
-  padding: 20px 23px;
+  padding: 20px 23px;  
   width: 254px;
-  height: 83px;
-}
-
-.btn-services {
-  width: 135px;
-  height: 38px;  
+  min-height: 83px;
 }
 
 .services-subtitle {
