@@ -15,7 +15,7 @@
 
     <body class="page-body">
 
-      <header class="main-header">        
+      <header class="main-header-catalog">        
         <!--Верхня часть шапки-->
         <div class="menu-header-bar">
           <div class="menu-header menu-font container">
@@ -130,22 +130,23 @@
               </li>
             </ul>
           </div>
-
-          <h1 class="catalog-product-title heading-primary">Перфораторы</h1>
+          <div class="catalog-product-title">
+            <h1 class="heading-primary">Перфораторы</h1>
+          </div>
 
           <div class="catalog-filter">
             <p class="subject-catalog catalog-filter-caption">Фильтр:</p>
             <form method="get" action="https://echo.htmlacademy.ru">
 
               <fieldset class="fieldset-filter price-filter">
-                <legend class="title-filter">Цена:</legend>
+                <legend class="title-filter title-filter-price">Цена:</legend>
                 <div class="range-price"><input type="range" min="0" max="30000"></div>
-                <p><span class="range-text">0</span> - <span class="range-text">30000</span></p>
+                <p><span class="range-text">0</span><span class="range-text">30000</span></p>
               </fieldset>
 
-              <fieldset class="fieldset-filter">
-                <legend class="title-filter">Производители:</legend>
-                <ul class="list-hiding list-hiding">
+              <fieldset class="fieldset-filter fieldset-manufacturer">
+                <legend class="title-filter itle-filter-manufacturer">Производители:</legend>
+                <ul class="list-hiding filter-manufacturer">
                   <li>
                     <input type="checkbox" name="bosch" id="filter-bosch" checked>
                     <label class="subject-filter" for="filter-bosch">Bosch</label>
@@ -168,9 +169,9 @@
                   </li>
                 </ul>
               </fieldset>
-              <fieldset class="fieldset-filter">
-                <legend class="title-filter">Питание:</legend>
-                <ul class="list-hiding">
+              <fieldset class="fieldset-filter fieldset-power">
+                <legend class="title-filter title-power">Питание:</legend>
+                <ul class="list-hiding filter-power">
                   <li>
                     <input type="radio" name="battery" value="filter-battery" id="filter-battery" checked>
                     <label class="subject-filter" for="filter-battery">Аккумуляторные</label>
@@ -189,20 +190,37 @@
             <h2 class="hiding-content">Список перфораторов</h2>
             <div class="sorting">
               <p class="subject-catalog sorting-text">Сортировка:</p>
-              <ul class="sorting-list breadcrumbs-list">
-                <li><a class="sorting-item-price sorting-item-current subject-catalog" href="#">По цене</a></li>
-                <li><a class="sorting-item-type sorting-item subject-catalog" href="#">По типу</a></li>
-                <li><a class="sorting-item-functionality sorting-item subject-catalog" href="#">По функционалу</a></li>
-              </ul>
-              <ul class="sorting-price breadcrumbs-list">
-                <li>
-                  <a class="descending-order" href="#">По убыванию</a>
-                </li>
-                <li>
-                  <a class="ascending-order" href="#">По возрастанию</a>
-                </li>
-              </ul>
+              
+              <div class="sorting-bar">
+                <ul class="sorting-list breadcrumbs-list">
+                  <li><a class="sorting-item-price sorting-item-current subject-catalog" href="#">По цене</a></li>
+                  <li><a class="sorting-item-type sorting-item subject-catalog" href="#">По типу</a></li>
+                  <li><a class="sorting-item-functionality sorting-item subject-catalog" href="#">По функционалу</a></li>
+                </ul>
+              
+              
+                <ul class="sorting-price breadcrumbs-list">
+                  <li>
+                    <a class="descending-order" href="#">
+                      <svg width="11" height="10" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M5.5 0L11 10L0 10" fill="#EE3643"/>
+                      </svg>  
+                      <span class="hiding-content">По убыванию</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a class="ascending-order" href="#">
+                      <svg width="11" height="10" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M5.5 10L0 0H11" fill="#C5C5C5"/>
+                      </svg>                                          
+                      <span class="hiding-content">По возрастанию</span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+
             </div>
+
             <ul class="catalog-list list-hiding">
               <li class="product-item">
                 <div class="product-container-img"><img src="img/produkt/bfg6000.jpg" width="144" height="128" alt="Перфоратор BOSCH BFG 6000"></div>
