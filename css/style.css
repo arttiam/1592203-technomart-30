@@ -1,8 +1,8 @@
 :root {
   --basic-white: #ffffff;
-  --basic-gray: #3D546F;
+  --basic-darc-gray: #3D546F;
   --semi-transparent-white: rgba(255,255,255, 0.5);
-  --semi-transparent-white: rgba(255,255,255, 0.3);
+  --semi-darc-white: rgba(255,255,255, 0.3);
   --dark-desaturated-blue: #32425c;
   --extra-desaturated-blue: #293449;
   --bright-red: #ee3643;
@@ -119,6 +119,7 @@ a {
 }
 
 .address-info {
+  padding-top: 2px;
   font-style: normal;
 }
 
@@ -136,7 +137,7 @@ a {
 /*menu-header*/
 
 .main-header {
-  margin-bottom: 60px;
+  margin-bottom: 59px;
 }
 
 .main-header-catalog {
@@ -191,16 +192,17 @@ a {
 }
 
 .search-form {
-  padding-left: 44px;
+  padding-left: 42px;
 }
 
 .search-magnifier {
   position: absolute;
-  left: 20px;
-  top: 13px;
+  left: 17px;
+  top: 12px;
+  opacity: 0.3;
 }
 
-.form-input:hover  g{
+.form-input:hover  .search-magnifier{
   opacity: 1;
 }
 
@@ -208,7 +210,7 @@ a {
   fill: var(--bright-red);
 }
 
-.form-input:focus-within g {
+.form-input:focus-within .search-magnifier {
   opacity: 1;
 }
 
@@ -264,22 +266,24 @@ a {
 
 .icon-bookmarks {
   position: absolute;
-  left: 23px;
-  top:12px;
+  left: 20px;
+  top:13px;
+  opacity: 0.3;
 }
 
 .icon-cart {
   position: absolute;
-  left: 28px;
-  top:12px;
+  left: 26px;
+  top:13px;
+  opacity: 0.3;
 }
 
-.link-menu:hover g {
+.link-menu:hover svg {
   opacity: 1;
 }
 
-.link-menu:active g{
-  opacity: 0.3;
+.link-menu:active svg {
+  opacity: 0.5;
 }
 
 .link-menu:hover {
@@ -318,9 +322,10 @@ a {
 .info-header {
   background-color: var(--light-white);
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: repeat(3, 300px);
+  gap: 20px;
   align-content: start;
-  padding: 46px 0 44.5px 30px;
+  padding: 44px 0 41px 0;
 }
 
 .info-text {
@@ -330,11 +335,10 @@ a {
   line-height: 23px;
   color: var(--bright-red);  
   margin: 0;
+  padding: 0 0 0 30px;
 }
 
-.header-adress {
-  justify-self: center;
-}
+
 
 .name-user-text {
   width: 299px;
@@ -375,9 +379,13 @@ a {
 .header-tel {
   text-align: center;
   border: 3px solid var(--basic-white);
-  height: 32px;
-  margin: 0;
-  padding-top: 7px;
+  width: 270px;
+  height: 45px;
+  margin: 2px 0 0 0;
+  padding: 2px 42px 5px 71px;
+  box-sizing: border-box;
+  background: url("../img/decaractive/icon-phone.svg") no-repeat 36px 8px;
+
 }
 
 .header-address-text {
@@ -385,6 +393,7 @@ a {
   font-size: 14px;
   line-height: 24px;
   color: var(--dark-desaturated-blue);
+  padding-left: 10px;
   margin:0;
 }
 
@@ -397,9 +406,9 @@ a {
 
 .header-login {
   list-style: none;
-  justify-self: center;
+  justify-self: start;
   display: flex;
-  padding: 0;
+  padding: 2px 0 0 20px;
   margin: 0;
 }
 
@@ -421,7 +430,7 @@ a {
 }
 
 .btn-login:hover path {
-  fill: var(--basic-gray);
+  fill: var(--basic-darc-gray);
 }
 
 .btn-login:active path {
@@ -478,7 +487,7 @@ a {
 .navigation-link {
   display: block;
   text-align: center;
-  padding: 15px 30px 20px 30px;
+  padding: 16px 28px 20px 28px;
   min-height: 60px;
   box-sizing: border-box;
 
@@ -491,6 +500,7 @@ a {
 
 .navigation-link:active {
   background-color: var(--basic-dark-blue);
+  opacity: 0.5;
   box-shadow: inset 0px -5px 0px var(--extra-desaturated-bluer);
 }
 
@@ -516,7 +526,7 @@ a {
 
 .link-services {
   display: inline-block;
-  background-color: var(--semi-transparent-white);
+  background-color: var(--semi-darc-white);
   color: var(--basic-white);
   min-width: 135px; 
   padding: 10px 22px;
@@ -674,11 +684,11 @@ a {
   position: absolute;
   content: "new";
   text-align: center;
-  padding: 2px 0;
+  padding: 5px 10px;
   box-sizing: border-box;
   width: 100px;
   height: 30px;
-  top:7px;
+  top:8px;
   right:-27px;
   text-transform: uppercase;
   transform: rotate(45deg);
@@ -793,11 +803,20 @@ a {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 898px;
-  height: 89px;
-  background-color: var(--light-grayish-orange);
+  width: 940px;
+  min-height: 89px;
+  background-color: var(--light-grayish-orange);  
+  box-sizing: border-box;
+}
+
+.products-section{
   padding: 0 14px 0 28px;
 }
+
+.manufacturers-section {
+  padding: 0 19px 0 28px;
+}
+
 
 .popular-products,
 .popular-manufacturers {
@@ -815,6 +834,7 @@ a {
   min-height: 318px; 
   border: 1px solid var(--light-black);
   padding-top: 6px;
+  box-sizing: border-box;
   overflow: hidden;
 }
 
@@ -838,10 +858,11 @@ a {
   display: flex;
   flex-direction: column;
   align-items:center;
-  justify-content: center;
+  padding-top: 31px;
   width: 184px;
   height: 164px;
   margin-bottom: 8px;
+ 
   z-index: 1;
 }
 
@@ -885,9 +906,11 @@ a {
 }
 
 .section-btn-all {
-  width: 144px;
+  width:192px;
   text-align: center;
-  padding: 11px 24px 9px 24px;
+  min-height: 38px;
+  padding: 9px 24px 9px 24px;
+  box-sizing: border-box;
 }
 
 .btn-buy, .btn-bookmark {
@@ -922,10 +945,14 @@ a {
   width: 135px;
   height: 38px;
   background-color: var(--dark-moderate-green);
+  background-image: url("../img/decaractive/icon-cart.svg");
+  background-repeat: no-repeat;
+  background-position: 30px 10px;
   text-decoration: none;
   color: var(--basic-white);
   box-shadow: inset 0px -3px 0px var(--light-green);
   border: none;
+  padding-left: 19px;
   border-radius: 2px;
   margin-bottom: 10px;
 }
@@ -964,7 +991,7 @@ a {
   text-decoration: line-through;
   text-transform: uppercase;
   color: var(--basic-gray);
-  margin: 0 0 13px 0;
+  margin: 0 0 14px 0;
 }
 
 .price-product-arrow {
@@ -975,6 +1002,7 @@ a {
     linear-gradient(225deg,var(--basic-white) 11%, transparent 11%),
     linear-gradient(315deg,var(--basic-white) 11%, transparent 11%);
   border-radius: 2px;
+  margin-left: 15px;
 }
 
 .price-product {
@@ -991,7 +1019,7 @@ a {
   left: 50%;
   width: 50%;
   height: 50%;
-  transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-59%) translateY(-50%);
 }
 
 /*popular-manufacturers*/
@@ -1032,7 +1060,7 @@ a {
 /*advantage-offers*/
 
 .advantage-offers-bar {
-  margin-bottom: 70px;
+  margin-bottom: 71px;
   padding-top: 64px;
   background-color: var(--light-grayish-blue);
 }
@@ -1075,7 +1103,7 @@ a {
 }
 
 .services-advantage {
-  margin-bottom: 67px;
+  margin-bottom: 70px;
   grid-column: 1/-1;
 }
 
@@ -1136,6 +1164,11 @@ a {
   background-color: var(--basic-white);
   box-shadow: 0px 1px 0px var(--basic-white);
 
+}
+
+.item-advantage:hover {
+  background-color: var(--extra-desaturated-blue);
+  box-shadow: 0px 1px 0px var(--extra-desaturated-blue), inset 0px 1px 0px var(--extra-black);
 }
 
 .item-advantage-guarantee{
@@ -1205,7 +1238,7 @@ a {
 
 
 .text-about-company:last-of-type {
-  margin: 0px;
+  margin: 2px;
 }
 
 .link-company:last-of-type {
@@ -1217,7 +1250,7 @@ a {
   display: block;
   list-style: none;
   padding: 0;
-  margin: 0 0 21px 0;
+  margin: 0 0 19px 0;
 }
 
 .link-company {
@@ -1271,8 +1304,12 @@ a {
 
 /*footer*/
 
-.logo {
-  margin-bottom: 22px;
+
+.link-logo {
+  display: block;
+  width: 220px;
+  height: 68px;
+  margin-bottom: 23px;
 }
 
 .logo-address {
@@ -1280,6 +1317,7 @@ a {
 }
 
 .text-address {
+  padding-left: 2px;
   margin: 0;
 }
 
@@ -1309,9 +1347,11 @@ a {
   margin: 0;
 }
 
-.footer-navigation-list li:not(:first-child),
+.footer-navigation-list li:not(:first-child) {
+  margin-left: 59px;
+}
 .footer-list-product li:not(:first-child)  {
-  margin-left: 58px;
+  margin-left: 59px;
 }
 
 .footer-navigation-list {
@@ -1325,7 +1365,7 @@ a {
 .footer-bottom {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  padding: 35px 0 34px 0;
+  padding: 31px 0 34px 0;
 }
 
 .text-copyright,
@@ -1334,9 +1374,8 @@ a {
 }
 
 .list-social-network {
-  display: flex;
-  justify-content: center;
-  padding: 0;
+  display: flex;  
+  padding-left: 76px;
 
 }
 
@@ -1363,6 +1402,7 @@ a {
 .footer-bottom-email {
   display: flex;
   justify-content: flex-end;
+  margin-right: 12px;
 }
 
 .text-site {
@@ -1377,6 +1417,10 @@ a {
 .text-email,
 .text-site {
   color: var(--basic-white);
+}
+
+.text-copyright {
+  padding-top: 3px;
 }
 
 .footer-navigation-link:hover,
