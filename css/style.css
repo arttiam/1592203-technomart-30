@@ -3,6 +3,7 @@
   --basic-dark-gray: #3D546F;
   --semi-transparent-white: rgba(255,255,255, 0.5);
   --semi-dark-white: rgba(255,255,255, 0.3);
+  --semi-dark-black: rgba(0,0,0,0.3);
   --dark-desaturated-blue: #32425c;
   --extra-desaturated-blue: #293449;
   --bright-red: #ee3643;
@@ -1570,12 +1571,14 @@ a[href]:active rect {
 .footer-navigation-link:active,
 .footer-link-product:active {
   mix-blend-mode: normal;
+  text-decoration:none;
   opacity: 0.5;
 }
 
 .link-email:active,
 .link-site:active {
   color: var(--bright-red);
+  text-decoration: none;
 }
 
 /*pop-up-write*/
@@ -1693,26 +1696,7 @@ a[href]:active rect {
   box-sizing: border-box;
 }
 
-.sorting-item:hover,
-.sorting-item-current:hover,
-.sorting-item:focus,
-.sorting-item-current:focus {
-  border-bottom: 1px solid var(--bright-red);
-  color: var(--basic-black);
-  opacity: 1;
-}
 
-.sorting-item,
-.sorting-item-current {
-  opacity: 0.3;
-}
-
-.sorting-item:active,
-.sorting-item-current:active {
-  border-bottom: none;
-  color: var(--bright-red);
-  opacity: 1;
-}
 
 .subject-catalog {
   font-family: "PT Sans", "Arial", sans-serif;
@@ -1899,7 +1883,7 @@ a[href]:active rect {
   width: 23px;
   height: 23px;
   background: url("../img/decaractive/checkbox-off-aiming.svg") no-repeat;
-  opacity: 0.77;
+  opacity: 0.78;
 }
 
 .filter-checkbox:focus + label {
@@ -1918,6 +1902,14 @@ a[href]:active rect {
   height: 23px;
   background: url("../img/decaractive/checkbox-on-aiming.svg") no-repeat;
   opacity: 0.77;
+}
+
+.filter-checkbox:disabled + label::before {
+  opacity: 0.3;
+}
+
+.filter-checkbox:disabled + label {
+  opacity: 0.4;
 }
 
 .filter-checkbox:checked:hover + label::before {
@@ -1959,6 +1951,14 @@ a[href]:active rect {
 
 .filter-radio:focus + label {
   outline: 1px dotted var( --dark-desaturated-blue);
+}
+
+.filter-radio:disabled + label {
+  opacity: 0.4;
+}
+
+.filter-radio:disabled + label::before {
+  opacity: 0.3;
 }
 
 .list-hiding {
@@ -2032,7 +2032,7 @@ a[href]:active rect {
 .pagination-link-next {
   background-color: var(--basic-white);
   color: var(--basic-black);
-  border: 1px solid var(--light-gray);
+  border: 1px solid var(--light-extra-gray);
   border-radius: 2px;
 }
 
@@ -2040,7 +2040,7 @@ a[href]:active rect {
 .pagination-link-next:hover,
 .pagination-link:focus,
 .pagination-link-next:focus  {
-  border: 1px solid var(--light-extra-gray);
+  border: 1px solid var(--light-gray);
 }
 
 .pagination-link:active,
@@ -2050,12 +2050,12 @@ a[href]:active rect {
 
 /*sorting*/
 
-.triangle-up {
-	width: 11px;
-	height: 10px;
-	border-left: 7px solid transparent;
-	border-right: 7px solid transparent;
-	border-bottom: 12px solid var(--bright-red);
+.sorting-item:hover,
+.sorting-item-current:hover,
+.sorting-item:focus,
+.sorting-item-current:focus {
+  border-bottom: 2px solid var(--bright-red);
+  color: var(--basic-black);
 }
 
 .sorting-item-price {
@@ -2076,8 +2076,16 @@ a[href]:active rect {
 }
 
 .sorting-item {
-  color: var(--basic-black);
-  border-bottom: 1px dotted var(--bright-red) ;
+  color: var(--semi-dark-black);
+  border-bottom: 2px dotted var(--bright-red) ;
+}
+
+
+.sorting-item:active,
+.sorting-item-current:active {
+  border-bottom: none;
+  color: var(--bright-red);
+  opacity: 1;
 }
 
 /*about-perforator*/
