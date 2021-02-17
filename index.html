@@ -114,7 +114,7 @@
       <div class="info-header-navigation">
         <nav class="navigation container">
           <ul class="navigation-list">
-            <li class="navigation-item"><a class="navigation-link menu-font" href="#">Главная</a></li>
+            <li class="navigation-item"><a class="navigation-link menu-font">Главная</a></li>
             <li class="navigation-item"><a class="navigation-link menu-font" href="blank.html">Компания</a></li>
             <li class="navigation-item"><a class="navigation-link menu-font" href="catalog.html">Каталог</a></li>
             <li class="navigation-item"><a class="navigation-link menu-font" href="blank.html">Новости</a></li>
@@ -388,25 +388,31 @@
     <script src="js/stock.js"></script>
     <script src="js/search.js"></script>
 
-    <section class="write-us hiding-content">
-      <h2 class="title-write-us hiding-content">Напишите нам</h2>
-      <form action="https://echo.htmlacademy.ru" method="post">
-
-        <label class="label-name menu-font" for="name">Ваше имя:</label>
-        <input id="name" type="text" name="name-field" placeholder="Имя Фамилия">
-
-        <label class="label-email menu-font" for="e-mail">Ваше e-mail:</label>
-        <input id="e-mail" type="email" name="email-field" placeholder="email@example.com">
-
-        <label class="labal-message menu-font" for="message">Текст письма:</label>
-        <textarea id="message" name="message-field" placeholder="В свободной форме"></textarea>
-
-        <button class="link-btn-sectio" type="submit">Отправить</button>
+    <section class="modal modal-write-us container-write-us-modal">
+      <h2 class="hiding-content">Напишите нам</h2>
+      <form class="fill-fields" action="https://echo.htmlacademy.ru" method="post">
+        <div class="user-fill-fields">
+          <div class="user-name">
+            <label class="label-name menu-font" for="name">Ваше имя:</label>
+            <input class="input-name style-input-modal" id="name" type="text" name="name-field" placeholder="Имя Фамилия">
+          </div>
+          <div class="address-name">
+            <label class="label-email menu-font" for="e-mail">Ваше e-mail:</label>
+            <input class="input-email style-input-modal" id="e-mail" type="email" name="email-field" placeholder="email@example.com">
+          </div>
+          <div>
+            <label class="labal-message menu-font" for="message">Текст письма:</label>
+            <textarea class="text-mail-modal" id="message" name="message-field" placeholder="В свободной форме"></textarea>
+          </div>    
+        </div>
+        <div class="btn-send-modal-bar">
+          <button class="link-btn-section style-btn-send-modal" type="submit">Отправить</button>
+        </div>
       </form>
-      <button type="button">Закрыть</button>
+      <button class="btn-close-modal" type="button"></button>
     </section>
 
-    <section class="hiding-content">
+    <section class="modal modal-map hiding-content">
       <h2>Как до нас добраться</h2>
       <!-- Здесь будет карта -->
       <button type="button">Закрыть</button>
