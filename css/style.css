@@ -4,6 +4,7 @@
   --semi-transparent-white: rgba(255,255,255, 0.5);
   --semi-dark-white: rgba(255,255,255, 0.3);
   --semi-dark-black: rgba(0,0,0,0.3);
+  --veri-dark-black: rgba(0,0,0, 0.4);
   --dark-desaturated-blue: #32425c;
   --extra-desaturated-blue: #293449;
   --bright-red: #ee3643;
@@ -1909,7 +1910,7 @@ a[href]:active rect {
 }
 
 .filter-checkbox:disabled + label {
-  opacity: 0.4;
+  color: var(--veri-dark-black);
 }
 
 .filter-checkbox:checked:hover + label::before {
