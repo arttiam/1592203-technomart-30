@@ -152,7 +152,7 @@ a {
 .logo-header {
   box-shadow: inset 0px -5px 0px var(--extra-gray);
   width: 220px;
-  height: 47px;
+  height: 42px;
 }
 
 a[href]:active rect {
@@ -176,7 +176,7 @@ a[href]:active rect {
 .menu-header {
   display: grid;
   grid-template-columns: 220px 270px 1fr;
-  height: 42px;
+  min-height: 42px;
   background-color: var(--extra-desaturated-blue);
 
 }
@@ -946,7 +946,8 @@ a[href]:active rect {
   overflow: hidden;
 }
 
-.product-item:hover {
+.product-item:hover,
+.product-item:focus {
   box-shadow: 0 4px 20px var(--very-light-black);
 }
 
@@ -976,7 +977,8 @@ a[href]:active rect {
   z-index: 1;
 }
 
-.product-item:hover > .product-container-img {
+.product-item:hover > .product-container-img,
+.product-item:focus-within > .product-container-img {
   opacity: 0;
   z-index: 0;
 }
@@ -1119,6 +1121,10 @@ a[href]:active rect {
   margin-left: 14px;
 }
 
+.product-item .link-product:focus {
+  outline: 1px dotted var( --dark-desaturated-blue);
+}
+
 .price-product {
   font-family: "PT Sans","Arial", sans-serif;
   font-weight: 700;
@@ -1159,7 +1165,8 @@ a[href]:active rect {
   height: 145px;
 }
 
-.manufacturers-item:hover {
+.manufacturers-item:hover,
+.manufacturers-item:focus {
   box-shadow: 0 4px 20px var(--very-light-black);
 }
 
@@ -1362,7 +1369,7 @@ a[href]:active rect {
   margin: 0px;
 }
 
-.list-company {  
+.list-company {
   display: block;
   list-style: none;
   padding: 0;
@@ -1379,12 +1386,12 @@ a[href]:active rect {
   vertical-align: top;
   content: "";
   width: 25px;
-  height: 2px;  
+  height: 2px;
   top: 11px;
   left: -38px;
   background-color: var(--bright-red);
   margin: 0 12px 4px 0;
- 
+
 }
 
 .link-about-company {
@@ -2155,7 +2162,7 @@ a[href]:active rect {
 }
 
 .link-logo-footer a {
-  height: 68px;  
+  height: 68px;
 }
 
 /*modal*/
@@ -2185,16 +2192,19 @@ a[href]:active rect {
 
 .modal-map {
   display: flex;
-  flex-wrap: wrap;
   align-items: flex-end;
   top: auto;
   right: 15px;
-  bottom: 346px;
+  bottom: 347px;
   left: 0;
   width: 940px;
   height: 447px;
   background-color: var(--basic-white);
   z-index: 5;
+}
+
+.modal-map iframe {
+  border: none;
 }
 
 .label-name,
@@ -2274,7 +2284,7 @@ a[href]:active rect {
   outline: none;
   width: 21px;
   height: 21px;
-  background: url("../img/decorative/icon-close.svg") transparent;  
+  background: url("../img/decorative/icon-close.svg") transparent;
 
 }
 
