@@ -6,7 +6,7 @@
     <title>HTML Academy: Техномарт</title>
 
     <link href="css/normalize.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
+    <link href="css/style.min.css" rel="stylesheet">
 
     <link rel="icon" href="favicon.ico">
     <link rel="icon" href="img/icon/32.svg" type="image/svg+xml">
@@ -133,7 +133,7 @@
 
       <section class="services container">
         <h2 class="hiding-content">Услуги</h2>
-        <div class="services-blok">
+        <div class="services-block">
           <ul class="categories">
             <li class="services-item services-item-materials plank-new">
               <h3 class="services-subtitle services-subtitle-font">Материалы</h3>
@@ -143,7 +143,7 @@
               <h3 class="services-subtitle services-subtitle-font">Инструмент</h3>
               <a class="link-services link-btn-section" href="blank.html">На все случаи</a>
             </li>
-            <li class="services-item services-item-technics">
+            <li class="services-item services-item-equipment">
               <h3 class="services-subtitle services-subtitle-font">Техника</h3>
               <a class="link-services link-btn-section" href="blank.html">Для стройки</a>
             </li>
@@ -184,7 +184,7 @@
         </div>
         <ul class="list-popular-products">
           <li class="product-item">
-            <div class="product-container-img"><img class="product-img" src="img/produkt/bfg9000.jpg" width="184" height="164" alt="Перфоратор BOSCH BFG 9000"></div>
+            <div class="product-container-img"><img class="product-img" src="img/products/bfg9000.jpg" width="184" height="164" alt="Перфоратор BOSCH BFG 9000"></div>
             <div class="product-btn">
               <button class="btn-buy" type="button" value="buy">Купить</button>
               <button class="btn-bookmark" type="button" value="bookmarks">В закладки</button>
@@ -194,7 +194,7 @@
             <div class="price-product-arrow"><p class="price-product">25500 р.</p></div>
           </li>
           <li class="product-item plank-new">
-            <div class="product-container-img"><img src="img/produkt/bfg2000-3000.jpg" width="127" height="112" alt="Перфоратор BOSCH BFG 3000"></div>
+            <div class="product-container-img"><img src="img/products/bfg2000-3000.jpg" width="127" height="112" alt="Перфоратор BOSCH BFG 3000"></div>
             <div class="product-btn">
               <button class="btn-buy" type="button" value="buy">Купить</button>
               <button class="btn-bookmark" type="button" value="bookmarks">В закладки</button>
@@ -204,7 +204,7 @@
             <div class="price-product-arrow"><p class="price-product">15500 р.</p></div>
           </li>
           <li class="product-item">
-            <div class="product-container-img"><img src="img/produkt/bfg6000.jpg" width="144" height="128" alt="Перфоратор BOSCH BFG 6000"></div>
+            <div class="product-container-img"><img src="img/products/bfg6000.jpg" width="144" height="128" alt="Перфоратор BOSCH BFG 6000"></div>
             <div class="product-btn">
               <button class="btn-buy" type="button" value="buy">Купить</button>
               <button class="btn-bookmark" type="button" value="bookmarks">В закладки</button>
@@ -214,7 +214,7 @@
             <div class="price-product-arrow"><p class="price-product">25500 р.</p></div>
           </li>
           <li class="product-item plank-new">
-            <div class="product-container-img"><img src="img/produkt/bfg2000-3000.jpg" width="127" height="112" alt="Перфоратор BOSCH BFG 2000"></div>
+            <div class="product-container-img"><img src="img/products/bfg2000-3000.jpg" width="127" height="112" alt="Перфоратор BOSCH BFG 2000"></div>
             <div class="product-btn">
               <button class="btn-buy" type="button" value="buy">Купить</button>
               <button class="btn-bookmark" type="button" value="bookmarks">В закладки</button>
@@ -388,8 +388,8 @@
     <script src="js/stock.js"></script>
     <script src="js/search.js"></script>
 
-    <section class="modal modal-write-us container-write-us-modal">
-      <h2 class="hiding-content">Напишите нам</h2>
+    <section class="modal modal-write-us ">
+      <h2 class="visually-hidden">Напишите нам</h2>
       <form class="fill-fields" action="https://echo.htmlacademy.ru" method="post">
         <div class="user-fill-fields">
           <div class="user-name">
@@ -397,25 +397,25 @@
             <input class="input-name style-input-modal" id="name" type="text" name="name-field" placeholder="Имя Фамилия">
           </div>
           <div class="address-name">
-            <label class="label-email menu-font" for="e-mail">Ваше e-mail:</label>
+            <label class="label-email menu-font" for="e-mail">Ваш e-mail:</label>
             <input class="input-email style-input-modal" id="e-mail" type="email" name="email-field" placeholder="email@example.com">
           </div>
           <div>
-            <label class="labal-message menu-font" for="message">Текст письма:</label>
+            <label class="label-message menu-font" for="message">Текст письма:</label>
             <textarea class="text-mail-modal" id="message" name="message-field" placeholder="В свободной форме"></textarea>
           </div>    
-        </div>
+        </div>        
         <div class="btn-send-modal-bar">
           <button class="link-btn-section style-btn-send-modal" type="submit">Отправить</button>
         </div>
       </form>
-      <button class="btn-close-modal" type="button"></button>
+      <button class="btn-close-modal btn-modal-write-us" type="button" aria-label="Закрыть"></button>
     </section>
 
-    <section class="modal modal-map hiding-content">
-      <h2>Как до нас добраться</h2>
-      <!-- Здесь будет карта -->
-      <button type="button">Закрыть</button>
+    <section class="modal modal-map visually-hidden">
+      <h2 class="visually-hidden">Как до нас добраться</h2>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037872533277!2d30.320858716096975!3d59.93871648187614!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1613590707864!5m2!1sru!2sru" width="943" height="441" allowfullscreen="" title="г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8"></iframe>
+      <button class="btn-close-modal btn-modal-map" type="button" aria-label="Закрыть"></button>
     </section>
 
   </body>

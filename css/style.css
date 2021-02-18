@@ -4,7 +4,7 @@
   --semi-transparent-white: rgba(255,255,255, 0.5);
   --semi-dark-white: rgba(255,255,255, 0.3);
   --semi-dark-black: rgba(0,0,0,0.3);
-  --veri-dark-black: rgba(0,0,0, 0.4);
+  --very-dark-black: rgba(0,0,0, 0.4);
   --dark-desaturated-blue: #32425c;
   --extra-desaturated-blue: #293449;
   --bright-red: #ee3643;
@@ -16,7 +16,7 @@
   --strong-green: #5fbb2d;
   --extra-light-black: rgba(0,0,0, 0.0001);
   --very-light-black:rgba(0,0,0, 0.15);
-  --very-dark-blak: rgba(0,0,0, 0.75);
+  --very-dark-black: rgba(0,0,0, 0.75);
   --light-grayish-blue: #f3f7f9;
   --light-grayish-orange: #f9f5f0;
   --light-orange: #ffbf47;
@@ -183,6 +183,7 @@ a[href]:active rect {
 
 .list-menu {
   display: flex;
+  flex-wrap: wrap;
   justify-content: flex-end;
   list-style: none;
   padding: 0;
@@ -252,6 +253,7 @@ a[href]:active rect {
 .link-menu-full {
   position: relative;
   display: inline-block;
+  vertical-align: top;
   background-color: var(--bright-red);
 }
 
@@ -260,6 +262,7 @@ a[href]:active rect {
   margin:0;
   min-width: 150px;
   display: inline-block;
+  vertical-align: top;
   color: var(--basic-white);
 }
 
@@ -410,7 +413,7 @@ a[href]:active rect {
   color: var(--bright-red);
 }
 
-.mmy-orders:active,
+.my-orders:active,
 .personal-area:active {
   color: var(--light-gray);
 }
@@ -467,6 +470,7 @@ a[href]:active rect {
 
 .header-authorized-user {
   display: flex;
+  flex-wrap: wrap;
   flex-direction: column;
   justify-self: end;
   padding-top: 2px;
@@ -476,16 +480,11 @@ a[href]:active rect {
 .my-orders-text {
   list-style: none;
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   margin: 0;
   padding: 0;
 }
-
-/*.my-orders-text {
-  margin-top: 0;
-  text-align: center;
-  margin-bottom: 0;
-}*/
 
 .header-tel a {
   font-family: "Cuprum", "Arial", sans-serif;
@@ -505,7 +504,7 @@ a[href]:active rect {
   margin: 2px 0 3px 0;
   padding: 4px 42px 5px 71px;
   box-sizing: border-box;
-  background: url("../img/decaractive/icon-phone.svg") no-repeat 36px 10px;
+  background: url("../img/decorative/icon-phone.svg") no-repeat 36px 10px;
 
 }
 
@@ -529,7 +528,8 @@ a[href]:active rect {
   list-style: none;
   justify-self: end;
   display: flex;
-  padding: 2px 0 0 20px;
+  flex-wrap: wrap;
+  padding: 2px 0 0 19px;
   margin: 0;
 }
 
@@ -539,6 +539,7 @@ a[href]:active rect {
 .btn-registration {
   box-sizing: border-box;
   display: inline-block;
+  vertical-align: top;
   background-color: var(--basic-white);
 }
 
@@ -589,6 +590,7 @@ a[href]:active rect {
 
 .navigation-list {
   display: flex;
+  flex-wrap: wrap;
   list-style: none;
   justify-content: center;
   margin: 0;
@@ -649,6 +651,7 @@ a[href]:active rect {
 
 .link-services {
   display: inline-block;
+  vertical-align: top;
   background-color: var(--semi-dark-white);
   color: var(--basic-white);
   min-width: 135px;
@@ -656,31 +659,6 @@ a[href]:active rect {
   text-align: center;
   box-sizing: border-box;
 }
-/*
-.services-item-tool .link-services {
-  width: 110px;
-  height: 28px;
-  padding: 10px 0 0 26px;
-}
-
-.services-item-technics .link-services {
-  width: 104px;
-  height: 28px;
-  padding: 10px 0 0 31px;
-}
-
-.services-item-discounts .link-services {
-  width: 113px;
-  height: 28px;
-  padding: 10px 0 0 22px;
-}
-
-.services-item-delivery .link-services {
-  width: 99px;
-  height: 28px;
-  padding: 10px 0 0 36px;
-}
-*/
 
 .link-services:hover,
 .link-services:focus {
@@ -701,6 +679,7 @@ a[href]:active rect {
 
 .categories {
   display: flex;
+  flex-wrap: wrap;
   justify-content:space-between;
   grid-row: 1;
   grid-column-start: 1;
@@ -748,7 +727,7 @@ a[href]:active rect {
   position: absolute;
   width: 22px;
   height: 40px;
-  background-image: url(../img/decaractive/icon-left-slide.svg);
+  background-image: url("../img/decorative/icon-left-slide.svg");
   cursor: pointer;
 }
 
@@ -774,7 +753,7 @@ a[href]:active rect {
   padding: 0;
 }
 
-.services-blok {
+.services-block {
   display: grid;
   grid-template-columns: repeat(3, 300px);
   gap: 20px;
@@ -801,7 +780,7 @@ a[href]:active rect {
   top: 31px;
   right: 43px;
   content: "";
-  background: url("../img/decaractive/bucket.svg") no-repeat;
+  background: url("../img/decorative/bucket.svg") no-repeat;
 }
 
 .plank-new::after {
@@ -817,7 +796,7 @@ a[href]:active rect {
   text-transform: uppercase;
   transform: rotate(45deg);
   background-color: var(--bright-red);
-  z-index: 999;
+  z-index: 4;
   color: var(--basic-white);
 }
 
@@ -828,7 +807,7 @@ a[href]:active rect {
   top: 34px;
   right: 31px;
   content: "";
-  background: url("../img/decaractive/electric-drill.svg") no-repeat;
+  background: url("../img/decorative/electric-drill.svg") no-repeat;
 }
 
 .services-item-tool{
@@ -841,19 +820,19 @@ a[href]:active rect {
   height: 266px;
 }
 
-.services-item-technics{
+.services-item-equipment{
   position: relative;
   background-color: var(--very-soft-magenta);
 }
 
-.services-item-technics::before {
+.services-item-equipment::before {
   position: absolute;
   width: 78px;
   height: 62px;
   top: 31px;
   right: 31px;
   content: "";
-  background: url("../img/decaractive/tractor.svg") no-repeat;
+  background: url("../img/decorative/tractor.svg") no-repeat;
 }
 
 .services-item-discounts{
@@ -868,7 +847,7 @@ a[href]:active rect {
   top: 26px;
   right: 45px;
   content: "";
-  background: url("../img/decaractive/bolwing-basket.svg") no-repeat;
+  background: url("../img/decorative/bolwing-basket.svg") no-repeat;
 }
 
 .services-item-delivery{
@@ -883,7 +862,7 @@ a[href]:active rect {
   top: 32px;
   right: 31px;
   content: "";
-  background: url("../img/decaractive/car.svg") no-repeat;
+  background: url("../img/decorative/car.svg") no-repeat;
 }
 
 /*list-tool-slide*/
@@ -905,6 +884,7 @@ a[href]:active rect {
 .link-slide {
   position: absolute;
   display: inline-block;
+  vertical-align: top;
   min-width: 192px;
   top: 201px;
   left: 24px;
@@ -927,6 +907,7 @@ a[href]:active rect {
 
 .section-saber {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
   width: 940px;
@@ -955,6 +936,7 @@ a[href]:active rect {
 .product-item {
   position: relative;
   display: flex;
+  flex-wrap: wrap;
   flex-direction: column;
   align-items: center;
   min-height: 318px;
@@ -970,6 +952,7 @@ a[href]:active rect {
 
 .product-container-img {
   display: flex;
+  flex-wrap: wrap;
   align-items:center;
   justify-content: center;
   width: 184px;
@@ -982,6 +965,7 @@ a[href]:active rect {
 .product-btn {
   position: absolute;
   display: flex;
+  flex-wrap: wrap;
   flex-direction: column;
   align-items:center;
   padding-top: 31px;
@@ -1074,7 +1058,7 @@ a[href]:active rect {
   width: 135px;
   height: 38px;
   background-color: var(--dark-moderate-green);
-  background-image: url("../img/decaractive/icon-cart.svg");
+  background-image: url("../img/decorative/icon-cart.svg");
   background-repeat: no-repeat;
   background-position: 30px 10px;
   text-decoration: none;
@@ -1215,7 +1199,7 @@ a[href]:active rect {
   height: 279px;
   bottom: 50px;
   left: 230px;
-  background: url("../img/decaractive/shadow.svg");
+  background: url("../img/decorative/shadow.svg");
 }
 
 .advantage-offers {
@@ -1341,11 +1325,13 @@ a[href]:active rect {
 
 .about-company {
   display: flex;
+  flex-wrap: wrap;
   flex-direction: column;
 }
 
 .contacts {
   display: flex;
+  flex-wrap: wrap;
   flex-direction: column;
 }
 
@@ -1376,25 +1362,29 @@ a[href]:active rect {
   margin: 0px;
 }
 
-.list-company {
-  position: relative;
+.list-company {  
   display: block;
   list-style: none;
   padding: 0;
-  margin: 0 0 19px 0;
+  margin: 0 0 19px 38px;
 }
 
 .link-company {
+  position: relative;
   margin-bottom: 12px;
 }
 
 .link-company::before {
-  display: inline-block;
+  position:absolute;
+  vertical-align: top;
   content: "";
   width: 25px;
-  height: 2px;
+  height: 2px;  
+  top: 11px;
+  left: -38px;
   background-color: var(--bright-red);
   margin: 0 12px 4px 0;
+ 
 }
 
 .link-about-company {
@@ -1475,6 +1465,7 @@ a[href]:active rect {
 .footer-navigation-list,
 .footer-list-product {
   display: flex;
+  flex-wrap: wrap;
   justify-content: flex-end;
   padding:0;
   margin: 0;
@@ -1508,6 +1499,7 @@ a[href]:active rect {
 
 .list-social-network {
   display: flex;
+  flex-wrap: wrap;
   padding: 2px 0 0 76px;
 
 }
@@ -1535,6 +1527,7 @@ a[href]:active rect {
 
 .footer-bottom-email {
   display: flex;
+  flex-wrap: wrap;
   justify-content: flex-end;
   margin-right: 13px;
   padding: 5px 0 0 0;
@@ -1618,6 +1611,7 @@ a[href]:active rect {
 
 .breadcrumbs-link {
   display: inline-block;
+  vertical-align: top;
   color: var(--basic-black);
 }
 
@@ -1625,7 +1619,7 @@ a[href]:active rect {
   width: 8px;
   height: 12px;
   margin: 5px 0 0 0;
-  background: url("../img/decaractive/arrow.svg") no-repeat;
+  background: url("../img/decorative/arrow.svg") no-repeat;
 }
 
 
@@ -1637,7 +1631,7 @@ a[href]:active rect {
 .breadcrumbs-home {
   width: 14px;
   height: 12px;
-  background: url("../img/decaractive/home.svg") no-repeat;
+  background: url("../img/decorative/home.svg") no-repeat;
 }
 
 .breadcrumbs-catalog {
@@ -1660,9 +1654,10 @@ a[href]:active rect {
 
 .sorting {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   min-height: 38px;
-  padding: 1px 15px 0 19px;
+  padding: 1px 15px 0 18px;
   box-sizing: border-box;
   border-radius: 3px;;
   background-color: var(--light-beige);
@@ -1671,6 +1666,7 @@ a[href]:active rect {
 .sorting-bar {
   min-width: 443px;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
 }
 
@@ -1680,6 +1676,7 @@ a[href]:active rect {
 
 .breadcrumbs-list-sorting {
   display: flex;
+  flex-wrap: wrap;
   margin: 0;
   padding: 0;
   list-style: none;
@@ -1691,6 +1688,7 @@ a[href]:active rect {
 
 .breadcrumbs-list {
   display: flex;
+  flex-wrap: wrap;
   margin: 0 0 15px 0;
   padding: 5px 0 0 0;
   list-style: none;
@@ -1774,6 +1772,7 @@ a[href]:active rect {
 
 .price-filter p {
   display: flex;
+  flex-wrap: wrap;
   position: relative;
   justify-content: space-between;
   margin: 0 0 25px 0;
@@ -1791,6 +1790,7 @@ a[href]:active rect {
 
 .range-text {
   display: inline-block;
+  vertical-align: top;
   min-width: 95px;
   font-family: "PT Sans", "Arial", sans-serif;
   font-size: 17px;
@@ -1883,7 +1883,7 @@ a[href]:active rect {
   left: -35px;
   width: 23px;
   height: 23px;
-  background: url("../img/decaractive/checkbox-off-aiming.svg") no-repeat;
+  background: url("../img/decorative/checkbox-off-aiming.svg") no-repeat;
   opacity: 0.78;
 }
 
@@ -1901,7 +1901,7 @@ a[href]:active rect {
   left: -35px;
   width: 27px;
   height: 23px;
-  background: url("../img/decaractive/checkbox-on-aiming.svg") no-repeat;
+  background: url("../img/decorative/checkbox-on-aiming.svg") no-repeat;
   opacity: 0.77;
 }
 
@@ -2003,6 +2003,7 @@ a[href]:active rect {
 
 .pagination-list {
   display: flex;
+  flex-wrap: wrap;
   padding: 0;
   margin: 0;
 }
@@ -2055,7 +2056,7 @@ a[href]:active rect {
 .sorting-item-current:hover,
 .sorting-item:focus,
 .sorting-item-current:focus {
-  border-bottom: 2px solid var(--bright-red);
+  border-bottom: 1px solid var(--bright-red);
   color: var(--basic-black);
 }
 
@@ -2073,12 +2074,12 @@ a[href]:active rect {
 }
 
 .sorting-price li:first-child{
-  margin-right: 22px;
+  margin-right: 21px;
 }
 
 .sorting-item {
   color: var(--semi-dark-black);
-  border-bottom: 2px dotted var(--bright-red) ;
+  border-bottom: 1px dotted var(--bright-red) ;
 }
 
 
@@ -2120,7 +2121,7 @@ a[href]:active rect {
 .oval {
   height: 66px;
   padding-left: 70px;
-  background: url("../img/decaractive/oval.svg") no-repeat;
+  background: url("../img/decorative/oval.svg") no-repeat;
 }
 
 .popup-place-order {
@@ -2145,6 +2146,7 @@ a[href]:active rect {
 
 .link-logo-footer {
   display: flex;
+  flex-wrap: wrap;
   align-items: flex-end;
   width: 220px;
   height: 67px;
@@ -2157,14 +2159,49 @@ a[href]:active rect {
 }
 
 /*modal*/
-.label-name,
-.label-email,
-.labal-message {
-  display: block;
+
+.modal {
+  position: fixed;
+  top: auto;
+  right: 15px;
+  bottom: 364px;
+  left: 0;
+  margin: auto;
+  box-sizing: border-box;
+  box-shadow: 0 20px 40px var(--very-dark-black), inset 0 7px 0 0 var(--bright-red);
 }
 
 .modal-write-us {
-  position: relative;
+  top: auto;
+  right: 15px;
+  bottom: 364px;
+  left: 0;
+  width: 620px;
+  min-height: 430px;
+  padding: 46px 0 0 0;
+  background-color: var(--basic-white);
+  z-index: 5;
+}
+
+.modal-map {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  top: auto;
+  right: 15px;
+  bottom: 346px;
+  left: 0;
+  width: 940px;
+  height: 447px;
+  background-color: var(--basic-white);
+  z-index: 5;
+}
+
+.label-name,
+.label-email,
+.label-message {
+  display: block;
+  margin-bottom: 9px;
 }
 
 .fill-fields {
@@ -2175,7 +2212,11 @@ a[href]:active rect {
 .user-fill-fields {
   display: flex;
   flex-wrap: wrap;
-  margin: 0 80px 0 80px;
+  margin: 0 80px 31px 80px;
+}
+
+.input-name {
+  margin-bottom: 8px;
 }
 
 .style-input-modal {
@@ -2190,6 +2231,7 @@ a[href]:active rect {
 
 .style-btn-send-modal {
   display: inline-block;
+  vertical-align: top;
   width: 460px;
   height: 38px;
   outline: none;
@@ -2204,27 +2246,21 @@ a[href]:active rect {
   height: 114px;
   border: 2px solid var(--light-gray);
   border-radius: 2px;
-  padding: 0 12px 0 8px;
+  padding: 6px 12px 0 8px;
   box-sizing: border-box;
   resize: none;
 }
 
-.container-write-us-modal {
-  width: 620px;
-  min-height: 430px;
-  padding: 46px 0 0 0;
-  margin: 0 auto;
-  box-sizing: border-box;
-  box-shadow: 0 20px 40px var(--very-dark-blak), inset 0 7px 0 0 var(--bright-red);
-}
+
 
 .user-name {
   margin-right: 20px;
-  margin-bottom: 13px;
+  margin-bottom: 7px;
 }
 
 .btn-send-modal-bar {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   width: 100%;
@@ -2238,7 +2274,17 @@ a[href]:active rect {
   outline: none;
   width: 21px;
   height: 21px;
+  background: url("../img/decorative/icon-close.svg") transparent;  
+
+}
+
+.btn-modal-write-us {
   top: 21px;
   left: 588px;
-  background: url("../img/decaractive/icon-close.svg") transparent;  
 }
+
+.btn-modal-map {
+  top: 17px;
+  left: 910px;
+}
+
