@@ -1151,10 +1151,6 @@ a[href]:active rect {
   transform: translateX(-59%) translateY(-50%);
 }
 
-.product-img:not([alt="Перфоратор BOSCH BFG 9000"])  {
-  margin-right: 11px;
-  margin-bottom: 9px;
-}
 
 /*popular-manufacturers*/
 
