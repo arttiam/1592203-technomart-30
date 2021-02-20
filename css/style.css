@@ -1506,7 +1506,7 @@ a[href]:active rect {
 .footer-bottom {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  padding: 31px 0 34px 0;
+  padding: 31px 0 22px 0;
 }
 
 .text-copyright,
