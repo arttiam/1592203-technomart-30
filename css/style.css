@@ -1652,6 +1652,7 @@ a[href]:active rect {
 .breadcrumbs-home {
   width: 14px;
   height: 12px;
+  margin-top: 5px;
   background: url("../img/decorative/home.svg") no-repeat;
 }
 
@@ -2140,8 +2141,11 @@ a[href]:active rect {
 }
 
 .oval {
+  position: absolute;
+  width: 66px;
   height: 66px;
-  padding-left: 70px;
+  top: 55px;
+  left: 81px;
   background: url("../img/decorative/oval.svg") no-repeat;
 }
 
@@ -2190,6 +2194,7 @@ a[href]:active rect {
   margin: auto;
   box-sizing: border-box;
   box-shadow: 0 20px 40px var(--very-dark-black), inset 0 7px 0 0 var(--bright-red);
+  z-index: 5;
 }
 
 .modal-write-us {
@@ -2201,7 +2206,6 @@ a[href]:active rect {
   min-height: 430px;
   padding: 46px 0 0 0;
   background-color: var(--basic-white);
-  z-index: 5;
 }
 
 .modal-map {
@@ -2214,7 +2218,18 @@ a[href]:active rect {
   width: 940px;
   height: 447px;
   background-color: var(--basic-white);
-  z-index: 5;
+}
+
+.oval + div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-product-added {
+  width: 620px;
+  min-height: 282px;
+  background-color: var(--basic-white);
 }
 
 .modal-map iframe {
@@ -2312,3 +2327,7 @@ a[href]:active rect {
   left: 910px;
 }
 
+.btn-modal-product-added {
+  top: 18px;
+  left: 566px;
+}
