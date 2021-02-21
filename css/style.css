@@ -2007,7 +2007,7 @@ a[href]:active rect {
 
 .main-product-list {
   display: grid;
-  grid-template-rows: 38px 1fr;
+  grid-template-rows: min-content 1fr;
   gap: 28px;
   grid-column: 2/-1;
   grid-row: 2;
@@ -2124,43 +2124,51 @@ a[href]:active rect {
 }
 
 .about-product {
-  min-height: 197px;
+  min-height: 167px;
   padding-top: 64px;
+  padding-bottom: 30px;
 }
 
 /*popup-cart*/
+
 .product-added-text{
   font-family: "Cuprum", "Arial", sans-serif;
   font-weight: 700;
-  font-size: 21px;
-  line-height: 21px;
+  font-size: 24px;
+  line-height: 30px;
+  margin: 7px 2px 0 0; 
 }
 
 .oval {
   position: absolute;
   width: 66px;
   height: 66px;
-  top: 55px;
-  left: 81px;
+  top: 42px;
+  left: 40px;
   background: url("../img/decorative/oval.svg") no-repeat;
 }
 
 .popup-place-order {
+  display: inline-block;
   font-family: "Cuprum", "Arial", sans-serif;
   font-size: 14px;
   line-height: 18px;
   color: var(--basic-white);
   background-color: var(--bright-red);
   text-transform: uppercase;
+  padding: 11px 47px 9px 46px;
+  margin-right: 10px;
 }
 
 .continue-shopping {
+  display: inline-block;
   font-family: "Cuprum", "Arial", sans-serif;
   font-size: 14px;
   line-height: 18px;
   color: var(--basic-black);
   background-color: var(--basic-white);
   text-transform: uppercase;
+  padding: 11px 31px 9px 32px;
 }
 
 /*footer catalog*/
@@ -2226,6 +2234,7 @@ a[href]:active rect {
   width: 620px;
   min-height: 282px;
   background-color: var(--basic-white);
+  left: 49px;
 }
 
 .modal-map iframe {
@@ -2325,5 +2334,5 @@ a[href]:active rect {
 
 .btn-modal-product-added {
   top: 18px;
-  left: 566px;
+  right: 13px;
 }
