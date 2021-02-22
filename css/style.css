@@ -153,11 +153,12 @@ a {
   box-shadow: inset 0px -5px 0px var(--extra-gray);
   width: 220px;
   height: 42px;
+  z-index: 1;
 }
 
 .link-logo-header[href]:focus svg {
-  outline: 3px dotted var(--basic-black);
-  z-index: 1;
+  outline: 3px dotted var(--extra-black);
+
 }
 
 .link-logo-header[href]:active rect {
@@ -180,7 +181,7 @@ a {
 
 .menu-header {
   display: grid;
-  grid-template-columns: 220px 270px 1fr;
+  grid-template-columns: 220px 271px 1fr;
   min-height: 42px;
   background-color: var(--extra-desaturated-blue);
 
@@ -212,7 +213,6 @@ a {
   margin-left: 0;
   border: none;
   border: 0;
-  width: 227px;
   height: 42px;
   background-color: var(--extra-desaturated-blue);
   -webkit-appearance: none;
@@ -223,8 +223,11 @@ a {
 }
 
 .search-form {
+  width: 229px;
+
   padding-left: 42px;
 }
+
 
 .search-magnifier {
   position: absolute;
@@ -459,6 +462,10 @@ a {
   padding-top: 11px;
   margin: 0 0 5px 0;
   box-sizing: border-box;
+}
+
+.name-user-text+a:focus {
+  outline: 1px dotted var(--basic-black);
 }
 
 .icon-user {
