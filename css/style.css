@@ -504,6 +504,20 @@ a {
   outline: 1px dotted var(--basic-black);
 }
 
+.link-phone {
+  position: relative;
+}
+
+.link-phone svg {
+  position: absolute;
+  top: 3px;
+  left: -35px;
+}
+
+.link-phone:focus path {
+  fill: var(--basic-dark-gray);
+}
+
 .header-tel {
   text-align: center;
   border: 3px solid var(--basic-white);
@@ -512,8 +526,6 @@ a {
   margin: 2px 0 3px 0;
   padding: 4px 42px 5px 71px;
   box-sizing: border-box;
-  background: url("../img/decorative/icon-phone.svg") no-repeat 36px 10px;
-
 }
 
 .header-address-text {
