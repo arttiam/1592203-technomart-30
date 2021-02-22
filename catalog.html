@@ -5,7 +5,7 @@
     <title>HTML Academy: Техномарт</title>
 
     <link href="css/normalize.css" rel="stylesheet">
-    <link href="css/style.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
 
     <link rel="icon" href="favicon.ico">
     <link rel="icon" href="img/icon/32.svg" type="image/svg+xml">
@@ -20,7 +20,7 @@
         <div class="menu-header-bar">
           <div class="menu-header menu-font container">
             <div class="logo-header">
-              <a href="index.html">
+              <a class="link-logo-header" href="index.html" aria-label="логотип техномарт">
                 <!--svg logo-->
                 <svg width="220" height="47" viewBox="0 0 220 47" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <g filter="url(#filter0_i)"><rect width="220" height="47" fill="#EE3643"/></g>
@@ -168,8 +168,8 @@
                   <div class="scale">
                     <div class="bar"></div>
                   </div>
-                  <div class="toggle toggle-min"></div>
-                  <div class="toggle toggle-max"></div>
+                  <div class="toggle toggle-min" tabindex="0"><span class="visually-hidden">ползунок нижнего диапазона</span></div>
+                  <div class="toggle toggle-max" tabindex="0"><span class="visually-hidden">ползунок верхнего диапазона</span></div>
                 </div>
                 <p><span class="range-text">0</span><span class="range-text">30000</span></p>
               </fieldset>
@@ -371,7 +371,7 @@
         <div class="footer-top-bar">
           <div class="footer-top container">
             <div class="logo-address">
-              <div class="link-logo-footer"><a href="index.html"><img class="logo-footer" class="logo" src="img/logo/logo-footer.svg" width="220" height="68" alt="logotip"></a></div>
+              <div class="link-logo-footer"><a class="link-logo-catalog" href="index.html"><img class="logo-footer" class="logo" src="img/logo/logo-footer.svg" width="220" height="68" alt="логотип техномаркет"></a></div>
               <address class="footer-address address-info">
                 <p class="text-address menu-font">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8<br><a class="link-footer-tel" href="tel:+78125550555">+7 (812) 555-05-55</a></p>
               </address>
