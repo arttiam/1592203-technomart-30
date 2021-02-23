@@ -166,7 +166,7 @@
 
           <div class="catalog-filter">
             <p class="subject-catalog catalog-filter-caption">Фильтр:</p>
-            <form method="get" action="https://echo.htmlacademy.ru">
+            <form method="post" action="https://echo.htmlacademy.ru">
 
               <fieldset class="fieldset-filter price-filter">
                 <legend class="title-filter title-filter-price">Цена:</legend>
@@ -177,7 +177,12 @@
                   <div class="toggle toggle-min" tabindex="0"><span class="visually-hidden">ползунок нижнего диапазона</span></div>
                   <div class="toggle toggle-max" tabindex="0"><span class="visually-hidden">ползунок верхнего диапазона</span></div>
                 </div>
-                <p><span class="range-text">0</span><span class="range-text">30000</span></p>
+                <div class="range-price-text">
+                  <label class="visually-hidden" for="range-min">Минимальный диапазон</label>
+                  <input class="range-text range-text-min" name="range-min" id="range-min" type="text" value="0">
+                  <label class="visually-hidden" for="range-max">Максимальный диапазон</label>
+                  <input class="range-text range-text-max" name="range-max" id="range-max" type="text" value="30000">
+                </div>
               </fieldset>
 
               <fieldset class="fieldset-filter fieldset-manufacturer">
