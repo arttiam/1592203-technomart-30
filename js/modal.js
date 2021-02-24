@@ -8,23 +8,64 @@ const textMail = document.querySelector(".text-mail-modal");
 const modalMap = document.querySelector(".modal-map");
 const linkModalMap = document.querySelector(".link-map-contacts");
 const btnCloseMap = document.querySelector(".btn-modal-map");
+const storageName = localStorage.getItem("name");
+const storageEmail = localStorage.getItem("email");
+const btnBuys = document.querySelectorAll(".btn-buy");
+const modalBuy = document.querySelector(".modal-product-added");
+const buyClose = document.querySelector(".btn-modal-product-added");
+const continueShopping = document.querySelector(".continue-shopping");
+let isStorageSupport = true;
+let storage = "";
+
+for (btnBuy of btnBuys) {
+  btnBuy.addEventListener("click", function() {
+    modalBuy.classList.remove("visually-hidden");
+  });
+};
+
+continueShopping.addEventListener("click", function(evt) {
+  evt.preventDefault();
+  modalBuy.classList.add("visually-hidden");
+});
+
+buyClose.addEventListener("click", function(evt) {
+  evt.preventDefault();
+  modalBuy.classList.add("visually-hidden");
+});
 
 linkModalWrite.addEventListener("click", function (evt) {
   evt.preventDefault();
+  modalWrite.classList.remove("hiding-content");
+  modalWrite.classList.add("opening-modal");
+  inputName.focus();
+  if (storageName) {
+    inputName.value = storageName;
+  } else {
+    inputName.value = "";
+  };
+  if (storageEmail) {
+    inputEmail.value = storageEmail;
+  } else {
+    inputEmail.value = "";
+  };
+  textMail.value = "";
+});
+
+btnClose.addEventListener("click", function() {
   modalWrite.classList.remove("not-filled");
   inputEmail.classList.remove('not-filled-shadow');
   inputName.classList.remove('not-filled-shadow');
   textMail.classList.remove('not-filled-shadow');
-  modalWrite.classList.remove("hiding-content");
-});
-
-btnClose.addEventListener("click", function() {
   modalWrite.classList.add("hiding-content");
 });
 
 window.addEventListener("keydown", function(evt){
   if (evt.keyCode === 27) {
     if (!modalWrite.classList.contains("hiding-content")) {
+      modalWrite.classList.remove("not-filled");
+      inputEmail.classList.remove('not-filled-shadow');
+      inputName.classList.remove('not-filled-shadow');
+      textMail.classList.remove('not-filled-shadow');
       modalWrite.classList.add("hiding-content");
     };
     if (!modalMap.classList.contains("visually-hidden")) {
@@ -50,7 +91,18 @@ btnSubmit.addEventListener("click", function(evt) {
     if (modalWrite.classList.contains("not-filled")) {
       modalWrite.classList.remove("not-filled");
     };
-      modalWrite.classList.add("not-filled");
+    modalWrite.classList.remove("opening-modal");
+    void modalWrite.offsetWidth;
+    modalWrite.classList.add("not-filled");
+  } else {
+    try {
+      storage = localStorage("name", inputName.value);
+    } catch (err) { 
+      isStorageSupport = false;  
+    };
+    if (isStorageSupport) {
+      localStorage("email", inputEmail.value);
+    };
   };
 });
 
@@ -75,8 +127,10 @@ textMail.addEventListener("focus", function() {
 linkModalMap.addEventListener("click", function(evt) {
   evt.preventDefault();
   modalMap.classList.remove("visually-hidden");
+  modalMap.classList.add("opening-modal-map");
 });
 
 btnCloseMap.addEventListener("click", function() {
   modalMap.classList.add("visually-hidden");
+  modalMap.classList.remove("opening-modal-map");
 });

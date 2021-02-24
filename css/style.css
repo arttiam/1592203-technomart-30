@@ -1469,12 +1469,13 @@ a {
   color: var(--basic-white)
 }
 
-.map-contacts {
-  margin-bottom: 25px;
-}
-
 .link-map-contacts:focus img {
   outline: 2px dotted var(--dark-desaturated-blue);
+}
+
+.link-map-contacts {
+  height: 158px;
+  margin-bottom: 25px;
 }
 
 .link-contacts:hover,
@@ -2216,6 +2217,11 @@ a {
   margin-right: 10px;
 }
 
+.popup-place-order:hover,
+.popup-place-order:focus {
+  background-color: var(--strong-red);
+}
+
 .continue-shopping {
   display: inline-block;
   font-family: "Cuprum", "Arial", sans-serif;
@@ -2225,6 +2231,11 @@ a {
   background-color: var(--basic-white);
   text-transform: uppercase;
   padding: 11px 31px 9px 32px;
+}
+
+.continue-shopping:hover,
+.continue-shopping:focus {
+  outline: 1px dotted var(--extra-desaturated-blue);
 }
 
 /*footer catalog*/
@@ -2251,21 +2262,17 @@ a {
 .modal {
   position: fixed;
   top: auto;
-  right: 15px;
-  bottom: 364px;
   left: 0;
   margin: auto;
   box-sizing: border-box;
   box-shadow: 0 20px 40px var(--very-dark-black), inset 0 7px 0 0 var(--bright-red);
-  transform: translateX(100px);
   z-index: 5;
 }
 
 .modal-write-us {
-  top: auto;
   right: 15px;
   bottom: 352px;
-  right: 215px;
+  right: 15px;
   width: 620px;
   min-height: 430px;
   padding: 46px 0 0 0;
@@ -2275,9 +2282,8 @@ a {
 .modal-map {
   display: flex;
   align-items: flex-end;
-  top: auto;
-  right: 215px;
-  bottom: 343px;
+  right: 15px;
+  bottom: 335px;
   left: 0;
   width: 940px;
   height: 447px;
@@ -2291,10 +2297,11 @@ a {
 }
 
 .modal-product-added {
+  left: 659px;
+  bottom: 352px;
   width: 620px;
   min-height: 282px;
   background-color: var(--basic-white);
-  left: 49px;
 }
 
 .modal-map iframe {
@@ -2344,6 +2351,11 @@ a {
   border: none;
 }
 
+.style-btn-send-modal:focus,
+.style-btn-send-modal:hover {
+  background-color: var(--strong-red);
+}
+
 .text-mail-modal {
 
   width: 460px;
@@ -2380,7 +2392,10 @@ a {
   width: 21px;
   height: 21px;
   background: url("../img/decorative/icon-close.svg") transparent;
+}
 
+.btn-close-modal:focus {
+  outline: 1px dotted var(--extra-desaturated-blue);
 }
 
 .btn-modal-write-us {
@@ -2400,22 +2415,22 @@ a {
 
 @keyframes shaking {
   0% {
-    transform: translateX(100px);
+    transform: translateX(-5px);
   }
   20% {
-    transform: translateX(105px);
+    transform: translateX(5px);
   }
   40% {
-    transform: translateX(95px);
+    transform: translateX(-5px);
   }
   60% {
-    transform: translateX(105px);
+    transform: translateX(5px);
   }
   80% {
-    transform: translateX(95px);
+    transform: translateX(-5px);
   }
   100% {
-    transform: translateX(105px);
+    transform: translateX(0);
   }
 }
 
@@ -2424,6 +2439,34 @@ a {
   animation-duration: 0.2s;
 }
 
+@keyframes surfacing {
+  0% {
+    transform: translatey(-750px);
+  } 
+  100% {
+    transform: translatey(0px);
+  }
+}
+
+.opening-modal {
+  animation-name: surfacing;
+  animation-duration: 1s;
+}
+
 .not-filled-shadow {
   box-shadow: 0 0 6px 3px var(--bright-red);
+}
+
+@keyframes surfacing-map {
+  0% {
+    transform: translatey(750px);
+  } 
+  100% {
+    transform: translatey(0px);
+  }
+}
+
+.opening-modal-map {
+  animation-name: surfacing-map;
+  animation-duration: 0.5s;
 }
