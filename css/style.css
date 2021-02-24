@@ -1473,6 +1473,10 @@ a {
   margin-bottom: 25px;
 }
 
+.link-map-contacts:focus img {
+  outline: 2px dotted var(--dark-desaturated-blue);
+}
+
 .link-contacts:hover,
 .link-contacts:focus {
   background-color: var(--strong-red);
@@ -2272,8 +2276,8 @@ a {
   display: flex;
   align-items: flex-end;
   top: auto;
-  right: 15px;
-  bottom: 347px;
+  right: 215px;
+  bottom: 343px;
   left: 0;
   width: 940px;
   height: 447px;
