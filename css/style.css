@@ -165,6 +165,10 @@ a:not([class="link-logo-header"]) {
   height: 47px;
 }
 
+.link-logo-header svg {
+  display: block;
+}
+
 .link-logo-header[href]:active rect {
   fill: var(--extra-strong-red);
 }
