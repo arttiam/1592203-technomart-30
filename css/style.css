@@ -137,6 +137,10 @@ img { max-width: 100% }
 
 a {
   text-decoration: none;
+  
+}
+
+a:not([class="link-logo-header"]) {
   outline: none;
 }
 
@@ -156,9 +160,9 @@ a {
   z-index: 1;
 }
 
-.link-logo-header[href]:focus svg {
-  outline: 3px dotted var(--extra-black);
-
+.link-logo-header[href] {
+  display: block;
+  height: 47px;
 }
 
 .link-logo-header[href]:active rect {
