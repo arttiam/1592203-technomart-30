@@ -1327,6 +1327,11 @@ a:not([class="link-logo-header"]) {
   min-height: 122px;
 }
 
+.text-services-credit p {
+  margin: 0 0 25px 0;
+  padding: 0;
+}
+
 .services-advantage {
   margin-bottom: 70px;
   grid-column: 1/-1;
@@ -1342,8 +1347,20 @@ a:not([class="link-logo-header"]) {
   line-height: 24px;
 }
 
-.advantage-title {
+.advantage-title-delivery {
   margin: 0 0 30px 0;
+  padding: 0;
+  color: var(--dark-desaturated-blue);
+}
+
+.advantage-title-guarantee {
+  margin: 0 0 24px 0;
+  padding: 0;
+  color: var(--dark-desaturated-blue);
+}
+
+.advantage-title-credit {
+  margin: 0 0 29px 0;
   padding: 0;
   color: var(--dark-desaturated-blue);
 }
@@ -1356,10 +1373,14 @@ a:not([class="link-logo-header"]) {
 }
 
 .link-btn-credit {
-  display: block;
-
+  display: inline-block;
+  text-align: center;
+  min-width: 195px;
+  padding: 10px 0 10px 0;
   background-color: var(--light-red);
   color: var(--basic-white);
+  box-sizing: border-box;
+  border-radius: 2px;
 }
 
 .link-btn-credit:hover {
@@ -1408,11 +1429,6 @@ a:not([class="link-logo-header"]) {
   box-shadow: 0px 1px 0px var(--extra-desaturated-blue), inset 0px 1px 0px var(--extra-black);
 }
 
-.link-btn-credit {
-  width: 151px;
-  height: 27px;
-  padding: 10px 0 0 45px;
-}
 
 .advantage-tabs-item {
   width: 619px;
@@ -1427,14 +1443,14 @@ a:not([class="link-logo-header"]) {
 
 .advantage-tabs-item-guarantee {
   background: url("../img/background/warranty.png") no-repeat;
-  background-position: right;
-  background-position-y: 20px;
+  background-position-x: 238px;
+  background-position-y: -2px;
 }
 
 .advantage-tabs-item-credit {
   background: url("../img/background/credit.png") no-repeat;
-  background-position: right;
-  background-position-y: 20px;
+  background-position-x: 165px;
+  background-position-y: -2x;
 }
 
 /*about-us*/
@@ -2474,6 +2490,11 @@ a:not([class="link-logo-header"]) {
 .btn-modal-map {
   top: 17px;
   left: 910px;
+}
+
+.modal-map img {
+  position: absolute;
+  z-index: -1;
 }
 
 .btn-modal-product-added {
