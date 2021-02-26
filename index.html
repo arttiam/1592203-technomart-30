@@ -6,7 +6,7 @@
     <title>HTML Academy: Техномарт</title>
 
     <link href="css/normalize.css" rel="stylesheet">
-    <link href="css/style.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
 
     <link rel="icon" href="favicon.ico">
     <link rel="icon" href="img/icon/32.svg" type="image/svg+xml">
@@ -164,18 +164,18 @@
             </li>
           </ul>
           <div class="list-tool-slide">
-            <div class="item-tool hiding-content">
-              <p class="tool-subtitle tool-position hiding-content">Перфораторы</p><p class="tool-text hiding-content">Настоящие мужские игрушки</p>
-              <a class="link-slide link-btn-section" href="catalog.html">Открыть каталог</a>
-              <img src="img/different/perforator.jpg" width="620" height="266" alt="Перфораторы">
-            </div>
             <div class="item-tool">
               <p class="tool-subtitle hiding-content">Дрели</p><p class="tool-text hiding-content">Соседям на радость!</p>
               <a class="link-slide link-btn-section" href="cataog.html">Открыть каталог</a>
               <img src="img/different/drill.jpg" width="620" height="266" alt="Дрели">
             </div>
+            <div class="item-tool index-slide">
+              <p class="tool-subtitle tool-position hiding-content">Перфораторы</p><p class="tool-text hiding-content">Настоящие мужские игрушки</p>
+              <a class="link-slide link-btn-section" href="catalog.html">Открыть каталог</a>
+              <img src="img/different/perforator.jpg" width="620" height="266" alt="Перфораторы">
+            </div>
             <button class="btn-back btn-slide" type="button"></button>
-            <button class="btn-next btn-slide" type="button"></button>
+            <button class="btn-next btn-slide btn-slide-background" type="button"></button>
             <button class="btn-back-img"></button>
             <button class="btn-next-img"></button>
           </div>
@@ -278,14 +278,14 @@
 
 
           <div class="advantage-tabs-list">
-            <div class="advantage-tabs-item">
+            <div class="advantage-tabs-item advantage-tabs-item-delivery">
               <h3 class="advantage-title heading-primary">Доставка</h3>
               <p class="text-services-delivery">Мы с удовольствием доставим ваш товар прямо<br>
               к вашему подъезду совершенно бесплатно! <br>
               Ведь мы неплохо заработаем,<br>
               поднимая его на ваш этаж!</p>
             </div>
-            <div class="advantage-tabs-item hiding-content">
+            <div class="advantage-tabs-item advantage-tabs-item-guarantee hiding-content">
               <h3 class="advantage-title heading-primary">Гарантия</h3>
               <p class="text-services-guarantee">Если купленный у нас товар поломается или заискрит,
               а также в случае пожара, спровоцированного его
@@ -293,7 +293,7 @@
               гарантии. Мы обменяем сгоревший товар на новый.
               Дом уж восстановите как-нибудь сами.</p>
             </div>
-            <div class="advantage-tabs-item hiding-content">
+            <div class="advantage-tabs-item advantage-tabs-item-credit hiding-content">
               <h3 class="advantage-title">Кредит</h3>
               <div class="text-services-credit">
                 <p>Залезть в долговую яму стало проще! Кредитные консультанты придут вам на помощь.</p>
@@ -448,5 +448,7 @@
     </section>
     
     <script src="js/modal.min.js"></script>
+    <script src="js/slide.js"></script>
+    <script src="js/services.js"></script>
   </body>
 </html>

@@ -746,6 +746,7 @@ a:not([class="link-logo-header"]) {
   padding: 0;
   border: 2px solid var(--basic-white);
   outline: none;
+  z-index: 2;
 }
 
 .btn-slide:focus {
@@ -755,7 +756,6 @@ a:not([class="link-logo-header"]) {
 .btn-next {
   top: 220px;
   left: 315px;
-  background-color: var(--bright-red);
 }
 
 .btn-back {
@@ -763,14 +763,8 @@ a:not([class="link-logo-header"]) {
   left: 295px;
 }
 
-.btn-back-img,
-.btn-next-img {
-  position: absolute;
-  width: 22px;
-  height: 40px;
-  border: none;
-  background: url("../img/decorative/icon-left-slide.svg");
-  cursor: pointer;
+.btn-slide-background {
+  background-color: var(--bright-red);
 }
 
 .btn-back-img:focus,
@@ -787,6 +781,17 @@ a:not([class="link-logo-header"]) {
   top: 122px;
   right: 20px;
   transform: rotate(180deg);
+}
+
+.btn-back-img,
+.btn-next-img {
+  position: absolute;
+  width: 22px;
+  height: 40px;
+  border: none;
+  background: url("../img/decorative/icon-left-slide.svg") transparent;
+  cursor: pointer;
+  z-index: 2;
 }
 
 .services-item {
@@ -863,11 +868,43 @@ a:not([class="link-logo-header"]) {
 }
 
 .item-tool {
-  position: relative;
+  position: absolute;
   height: 266px;
 }
 
-.services-item-equipment{
+.index-slide {
+  z-index: 1;
+}
+
+@keyframes appearance-slide-animation {
+  0% {
+    opacity: 0.2;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fading-slide-animation {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.2;
+  }
+}
+
+.appearance-slide {
+  animation-name: appearance-slide-animation;
+  animation-duration: 0.5s;
+}
+
+.fading-slide {
+  animation-name: fading-slide-animation;
+  animation-duration: 1s;
+}
+
+.services-item-equipment {
   position: relative;
   background-color: var(--very-soft-magenta);
 }
@@ -1380,12 +1417,25 @@ a:not([class="link-logo-header"]) {
 .advantage-tabs-item {
   width: 619px;
   padding-bottom: 101px;
+}
+
+.advantage-tabs-item-delivery {
   background: url("../img/background/delivery.png") no-repeat;
   background-position: right;
   background-position-y: 20px;
 }
 
+.advantage-tabs-item-guarantee {
+  background: url("../img/background/warranty.png") no-repeat;
+  background-position: right;
+  background-position-y: 20px;
+}
 
+.advantage-tabs-item-credit {
+  background: url("../img/background/credit.png") no-repeat;
+  background-position: right;
+  background-position-y: 20px;
+}
 
 /*about-us*/
 
