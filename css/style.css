@@ -2280,12 +2280,13 @@ a:not([class="link-logo-header"]) {
   margin: 7px 2px 0 0; 
 }
 
-.oval {
+.product-added-text-bar::before {
   position: absolute;
+  content: "";
   width: 66px;
   height: 66px;
-  top: 42px;
-  left: 40px;
+  top: 55px;
+  left: 80px;
   background: url("../img/decorative/oval.svg") no-repeat;
 }
 
@@ -2374,7 +2375,8 @@ a:not([class="link-logo-header"]) {
   background-color: var(--basic-white);
 }
 
-.oval + div {
+.product-added-text-bar {
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
