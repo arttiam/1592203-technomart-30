@@ -28,7 +28,6 @@ for (let i = 0; i < itemSlide.length; i++) {
 btnNextImg.addEventListener ("click", function () {
   var nextSlide = activeSlide.nextElementSibling;
   if (!nextSlide) {
-    console.log("ok");
     activeSlide.classList.remove("index-slide");
     itemSlide[0].classList.add("index-slide");
     activeSlide = itemSlide[0];
@@ -36,7 +35,6 @@ btnNextImg.addEventListener ("click", function () {
     dots[0].classList.add("btn-slide-background");
     activeDot = dots[0];
   } else {
-    console.log(nextSlide);
     activeSlide.classList.remove("index-slide");
     nextSlide.classList.add("index-slide");
     activeSlide = nextSlide;
@@ -57,7 +55,6 @@ btnBackImg.addEventListener("click",function () {
     activeDot = dots[dots.length-1];
     activeDot.classList.add("btn-slide-background");
   } else {
-    console.log(prevSlide);
     activeSlide.classList.remove("index-slide");
     activeSlide = prevSlide;
     activeSlide.classList.add("index-slide");

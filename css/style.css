@@ -763,11 +763,6 @@ a:not([class="link-logo-header"]) {
   left: 295px;
 }
 
-.btn-back1 {
-  top: 220px;
-  left: 335px;
-}
-
 .btn-slide-background {
   background-color: var(--bright-red);
 }
