@@ -1,70 +1,69 @@
 const itemSlide = document.querySelectorAll(".item-tool");
-const btnBack = document.querySelector(".btn-back");
-const btnNext = document.querySelector(".btn-next");
+const dots = document.querySelectorAll(".btn-slide");
 const btnBackImg = document.querySelector(".btn-back-img");
 const btnNextImg = document.querySelector(".btn-next-img");
+let activeDot = document.querySelector(".btn-slide-background");
+let activeSlide = document.querySelector(".index-slide");
 
-btnBack.addEventListener("click", function() {
-  if (!itemSlide[0].classList.contains("index-slide")) {
-    btnNext.classList.remove("btn-slide-background");
-    btnBack.classList.add("btn-slide-background");
+for (let i = 0; i < itemSlide.length; i++) {
+
+  dots[i].addEventListener("click", function(e) {
+
+    if (e.target.classList.contains("btn-slide-background")) {
+      return
+    };
+
+    activeDot.classList.remove("btn-slide-background");
+    e.target.classList.add("btn-slide-background");
+    activeDot = e.target;
+    activeSlide.classList.remove("index-slide");
+    itemSlide[i].classList.add("index-slide");
+    activeSlide = itemSlide[i];
+  
+  });
+
+};
+
+
+btnNextImg.addEventListener ("click", function () {
+  var nextSlide = activeSlide.nextElementSibling;
+  if (!nextSlide) {
+    console.log("ok");
+    activeSlide.classList.remove("index-slide");
     itemSlide[0].classList.add("index-slide");
-    itemSlide[1].classList.remove("index-slide");
-    itemSlide[0].classList.remove("appearance-slide");
-    void itemSlide[0].offsetWidth;
-    itemSlide[0].classList.add("appearance-slide");
-  };
-});
-
-btnNext.addEventListener("click", function() {
-  if (!itemSlide[1].classList.contains("index-slide")) {
-    btnNext.classList.add("btn-slide-background");
-    btnBack.classList.remove("btn-slide-background");
-    itemSlide[1].classList.add("index-slide");
-    itemSlide[0].classList.remove("index-slide");
-    itemSlide[1].classList.remove("appearance-slide");
-    void itemSlide[1].offsetWidth;
-    itemSlide[1].classList.add("appearance-slide");
-  };
-});
-
-btnBackImg.addEventListener("click", function() {
-  if (!itemSlide[0].classList.contains("index-slide")) {
-    btnNext.classList.remove("btn-slide-background");
-    btnBack.classList.add("btn-slide-background");
-    itemSlide[0].classList.add("index-slide");
-    itemSlide[1].classList.remove("index-slide");
-    itemSlide[0].classList.remove("appearance-slide");
-    void itemSlide[0].offsetWidth;
-    itemSlide[0].classList.add("appearance-slide");
+    activeSlide = itemSlide[0];
+    activeDot.classList.remove("btn-slide-background");
+    dots[0].classList.add("btn-slide-background");
+    activeDot = dots[0];
   } else {
-    btnNext.classList.add("btn-slide-background");
-    btnBack.classList.remove("btn-slide-background");
-    itemSlide[1].classList.add("index-slide");
-    itemSlide[0].classList.remove("index-slide");
-    itemSlide[1].classList.remove("appearance-slide");
-    void itemSlide[1].offsetWidth;
-    itemSlide[1].classList.add("appearance-slide");
-  };
+    console.log(nextSlide);
+    activeSlide.classList.remove("index-slide");
+    nextSlide.classList.add("index-slide");
+    activeSlide = nextSlide;
+    var nextDot = activeDot.nextElementSibling;
+    nextDot.classList.add("btn-slide-background");
+    activeDot.classList.remove("btn-slide-background");
+    activeDot = nextDot;          
+  }
 });
 
-btnNextImg.addEventListener("click", function() {
-  if (!itemSlide[0].classList.contains("index-slide")) {
-    btnNext.classList.remove("btn-slide-background");
-    btnBack.classList.add("btn-slide-background");
-    itemSlide[0].classList.add("index-slide");
-    itemSlide[1].classList.remove("index-slide");
-    itemSlide[0].classList.remove("appearance-slide");
-    void itemSlide[0].offsetWidth;
-    itemSlide[0].classList.add("appearance-slide");
+btnBackImg.addEventListener("click",function () {
+  let prevSlide = activeSlide.previousElementSibling;
+  if (!prevSlide) {
+    activeSlide.classList.remove("index-slide");
+    activeSlide = itemSlide[itemSlide.length-1];
+    activeSlide.classList.add("index-slide");
+    activeDot.classList.remove("btn-slide-background");
+    activeDot = dots[dots.length-1];
+    activeDot.classList.add("btn-slide-background");
   } else {
-    btnNext.classList.add("btn-slide-background");
-    btnBack.classList.remove("btn-slide-background");
-    itemSlide[1].classList.add("index-slide");
-    itemSlide[0].classList.remove("index-slide");
-    itemSlide[1].classList.remove("appearance-slide");
-    void itemSlide[1].offsetWidth;
-    itemSlide[1].classList.add("appearance-slide");
-  };
+    console.log(prevSlide);
+    activeSlide.classList.remove("index-slide");
+    activeSlide = prevSlide;
+    activeSlide.classList.add("index-slide");
+    let prevDot = activeDot.previousElementSibling;
+    activeDot.classList.remove("btn-slide-background");
+    activeDot = prevDot;
+    activeDot.classList.add("btn-slide-background");
+  }
 });
-
